@@ -1,0 +1,615 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background-color: rgb(1, 10, 15);
+	color: #eee;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.active{
+	color: gold;
+}
+
+.hide{
+	display: none;
+}
+
+.matchbox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 688px;
+
+	&__top {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 1em 2em;
+		width: 100%;
+		background-color: #001e28;
+
+		&-text {
+			position: absolute;
+			top: 55px;
+			left: 645px;
+			transform: matrix(0, -1, 1, 0, 0, 0);
+		}
+
+		&-heading {
+			display: flex;
+			align-items: center;
+			margin: 1em 0;
+			font-size: 1.5rem;
+			text-decoration: none;
+			color: #ddd;
+			text-transform: uppercase;
+			font-family: 'Bruno Ace SC', cursive;
+		}
+
+		&-img {
+			width: 30px;
+		}
+	}
+
+	&__teams {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		background: transparent;
+		font-size: 1.2rem;
+		border-bottom: 1px solid #0f2d37;
+
+		&-header {
+			display: flex;
+			align-items: center;
+			margin-top: 0.5em;
+			padding: 0.5em 1.7em;
+			width: 100%;
+			border-bottom: 1px solid #0f2d37;
+		}
+
+		&-addbtn{
+			padding: 0.5em 1em;
+			background-color: rgb(85, 84, 84);
+			color: #eee;
+			font-size: 1rem;
+			border-radius: 5px;
+		}
+
+		&-addbtnone{
+			position: absolute;
+			top: 140px;
+			left: 20px;
+		}
+
+		&-addbtntwo{
+			position: absolute;
+			top: 140px;
+			left: 545px;
+		}
+
+		&-link,
+		&-img,
+		&-icon {
+			margin-right: 0.5em;
+		}
+
+		&-link,
+		&-league {
+			color: #c8cdcd;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+
+		&-league {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&-icon {
+			font-size: 1.4rem;
+		}
+
+		&-img {
+			width: 18px;
+			height: 12px;
+		}
+
+		&-main {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin-top: 2em;
+			width: 100%;
+		}
+
+		&-team {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 1em;
+			// width: 40%;
+		}
+
+		&-teamone {
+			margin: 0 2em 0 0em;
+		}
+
+		&-teamtwo {
+			margin: 0 0em 0 2em;
+		}
+
+		&-teamname {
+			margin-top: 0.5em;
+			color: #eee;
+			font-size: 1.6rem;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&-time {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 1em;
+			width: 30%;
+			height: 100%;
+			color: #c8cdcd;
+		}
+
+		&-logo {
+			padding: 1em;
+			width: 84px;
+			background-color: #fff;
+			border-radius: 10px;
+		}
+
+		&-exacttime {
+			font-size: 1.3rem;
+		}
+
+		&-minus {
+			font-size: 5.6rem;
+			font-weight: bold;
+			color: #eee;
+		}
+
+		&-star {
+			padding: 0.5em;
+			margin-bottom: 1.2em;
+			font-size: 1.8rem;
+			cursor: pointer;
+		}
+
+		&-audiobtn {
+			padding: 0.5em;
+			margin-bottom: 2em;
+			width: 41%;
+			background-color: #999;
+			border-radius: 8px;
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			cursor: not-allowed;
+		}
+
+		&-audioicon {
+			font-size: 1.5rem;
+			margin-right: 0.5em;
+		}
+
+		&-leg {
+			margin-bottom: 0.5em;
+			background-color: #001e28;
+			border-radius: 5px;
+			padding: 0.5em 1em;
+		}
+
+		&-nav {
+			display: flex;
+			align-items: center;
+			margin-bottom: 1em;
+			padding: 0.5em 0;
+			width: 100%;
+			border-top: 1px solid #0f2d37;
+			border-bottom: 1px solid #0f2d37;
+		}
+
+		&-navelement {
+			padding: 0.5em 1em;
+			color: #c8cdcd;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 1.2rem;
+		}
+
+		&-navelement:first-child {
+			margin-left: 0.5em;
+		}
+
+		&-active {
+			color: #dc0000;
+			border-bottom: 3px solid #dc0000;
+		}
+	}
+
+	&__sectionheader {
+		padding: 0.5em 0.1em;
+		width: 100%;
+		background-color: #001e28;
+		border-radius: 5px;
+
+		&-text {
+			margin: 0 1em;
+			color: #c8cdcd;
+			font-size: 1.1rem;
+			text-align: left;
+			text-transform: uppercase;
+		}
+	}
+
+	&__preview {
+		margin-top: 1em;
+		padding: 0.5em 1.5em;
+
+		&-text {
+			display: none;
+			margin-bottom: 1.2em;
+			line-height: 1.7em;
+			font-size: 1.3rem;
+			color: #c8cdcd;
+		}
+
+		&-texttop {
+			display: block;
+		}
+
+		&-span {
+			font-weight: bold;
+		}
+
+		&-btn {
+			padding: 0.3em;
+			margin-bottom: 1em;
+			background: transparent;
+			color: #eee;
+			text-decoration: underline;
+			font-size: 1.2rem;
+			border: none;
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		&-btnicon {
+			margin-left: 0.5em;
+		}
+
+		&-darktext {
+			color: rgba(200, 200, 200, 0.5);
+		}
+
+		&-darkertext {
+			color: rgba(200, 200, 200, 0.3);
+		}
+	}
+
+	&__odds {
+		display: flex;
+		align-items: center;
+		padding: 1em;
+		width: 100%;
+
+		&-odd {
+			margin-left: 0.5em;
+			padding: 0.5em 1em;
+			background-color: transparent;
+			color: #c8cdcd;
+			border: 1px solid #0f2d37;
+			border-radius: 5px;
+			font-size: 1.3rem;
+			text-decoration: none;
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&-result {
+			margin-right: 0.7em;
+		}
+
+		&-arrowdown {
+			color: #dc0000;
+			font-size: 1.4rem;
+		}
+
+		&-arrowup {
+			color: #14dc4b;
+			font-size: 1.4rem;
+		}
+
+		&-value {
+			margin-left: 0.3em;
+			color: #eee;
+		}
+
+		&-btn,
+		&-bottombtn {
+			background-color: #ffda33;
+			border-radius: 8px;
+		}
+
+		&-btn {
+			margin-right: auto;
+			padding: 0.5em;
+		}
+
+		&-bottombtn {
+			padding: 0.7em 1em;
+			margin: 2em 0;
+			width: 97%;
+			border-radius: 5px;
+		}
+
+		&-bottombtnlink {
+			color: #001e28;
+			font-size: 1.3rem;
+			font-weight: bold;
+		}
+
+		&-btnlink {
+			color: #001e28;
+			text-transform: uppercase;
+			text-decoration: none;
+			letter-spacing: 2px;
+			font-weight: bold;
+			font-size: 1rem;
+		}
+	}
+
+	&__wontplay {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0.5em 1em;
+		margin-bottom: 2em;
+		width: 100%;
+
+		&-row {
+			display: flex;
+			align-items: center;
+			padding: 1em 2em;
+		}
+
+		&-row:nth-child(even) {
+			background-color: #001e28;
+			border-radius: 5px;
+		}
+
+		&-team:nth-child(odd) {
+			margin-right: auto;
+		}
+
+		&-team:nth-child(even) {
+			text-align: right;
+		}
+
+		&-player {
+			font-size: 1.3rem;
+			font-weight: bold;
+		}
+
+		&-player:nth-child(odd) {
+			text-align: right;
+		}
+
+		&-reason {
+			font-size: 1.2rem;
+		}
+
+		&-flag {
+			width: 18px;
+			height: 12px;
+		}
+	}
+
+	&__tv {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0.5em 1em;
+
+		&-header {
+			margin: 1em 0;
+			color: #c8cdcd;
+			font-size: 1.1rem;
+			text-transform: uppercase;
+		}
+
+		&-channelsbox {
+			margin-bottom: 2em;
+			line-height: 1.6rem;
+		}
+
+		&-channel {
+			color: #eee;
+			font-size: 1.3rem;
+			font-weight: bold;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&-icon {
+			margin-right: 0.5em;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0.5em 1em;
+		margin-bottom: 1em;
+		width: 100%;
+
+		&-row {
+			display: flex;
+			align-items: center;
+			padding: 0.5em 1em;
+			font-size: 1.1rem;
+		}
+
+		&-left {
+			margin-right: auto;
+			color: #c8cdcd;
+			text-transform: uppercase;
+		}
+
+		&-right {
+			font-weight: bold;
+		}
+
+		&-icon {
+			margin-right: 0.5em;
+			font-size: 1.3rem;
+		}
+	}
+
+	&__news {
+		display: flex;
+		flex-direction: column;
+		// align-items: center;
+		padding: 0.5em 1em;
+		width: 100%;
+		text-decoration: none;
+
+		&-box {
+			display: flex;
+			margin-bottom: 1em;
+			width: 100%;
+			border-bottom: 1px solid #0f2d37;
+		}
+
+		&-box:hover &-text {
+			text-decoration: underline;
+		}
+
+		&-img {
+			width: 192px;
+			height: 128px;
+			border-radius: 5px;
+		}
+
+		&-textbox {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 1em 2em;
+		}
+
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.8rem;
+			color: #eee;
+		}
+
+		&-time {
+			color: #999;
+			font-size: 1.2rem;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 0.5em 1em;
+		margin: 1em 0;
+		color: #eee;
+		font-size: 1.2rem;
+
+		&-link {
+			margin-bottom: 2em;
+			color: #eee;
+		}
+
+		&-text {
+			margin-bottom: 1em;
+		}
+
+		&-privacy {
+			color: #999;
+		}
+
+		&-icon {
+			margin-right: 0.5em;
+			color: #999;
+		}
+
+		&-gambling {
+			color: #c8cdcd;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&-btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2em;
+			padding: 0.5em 1em;
+			width: 130px;
+			color: #eee;
+			background: transparent;
+			font-size: 1.2rem;
+			border: none;
+			cursor: pointer;
+		}
+
+		&-btntext {
+			text-decoration: underline;
+		}
+
+		&-btnicon {
+			margin-right: 0.5em;
+			font-size: 1.7rem;
+		}
+
+		&-link:hover,
+		&-btn:hover &-btntext,
+		&-privacy:hover {
+			text-decoration: none;
+		}
+	}
+}

@@ -1,0 +1,81 @@
+.hide {
+	display: none;
+}
+
+.blur {
+	filter: blur(3px);
+	-webkit-filter: blur(3px);
+}
+
+.disabled{
+	pointer-events: none;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.active{
+	background-color:#ff0046;
+	// pointer-events: none;
+}
+
+.darkergrey {
+	color: #555e61;
+}
+
+.white {
+	background-color: #fff;
+}
+
+.textwhite{
+	color: #fff;
+}
+
+.darkgrey {
+	background-color: #999;
+}
+
+.lightgrey {
+	background-color: #ddd;
+}
+
+.lightgold {
+	background-color: #fff2ce;
+}
+
+.lightblack {
+	color: #00141e;
+}
+
+.verylightblack {
+	color: #555e61;
+}
+
+.black {
+	color: #001e28;
+}
+
+.eee{
+    background-color: #eee;
+}
+
+.grey{
+    color:#999;
+}
+
+.transparent{
+    color: transparent;
+}
+
+.bgblack{
+    background-color: #00141e;
+}
+
+.bg-lightblue{
+	background-color: rgb(238,247,255);
+}
+
+.bg-blue{
+	background-color: #4285F4;
+}

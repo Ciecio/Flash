@@ -1,0 +1,87 @@
+.togglePrefSettings {
+	&::before {
+		animation: togglePrefBtn 0.5s linear 0s forwards 1;
+	}
+}
+.togglePrefSettings2 {
+	&::before {
+		animation: togglePrefBtn2 0.5s linear 0s forwards 1;
+	}
+}
+
+.togglesettings {
+	&::before {
+		animation: toggleSettings 0.5s linear 0s forwards 1;
+	}
+}
+
+.togglesettings2 {
+	animation: toggleSettings2 0.5s linear 0s forwards 1;
+}
+
+.addbefore {
+	&::before {
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 10px;
+		height: 10px;
+		background-color: #14dc4b;
+		border-radius: 50%;
+		content: '';
+	}
+}
+
+body,
+.regionbar__heading,
+.regionbar__star,
+.scores,
+.scores__leaguelive,
+.scores__leaguelivetop,
+.scores__heading,
+.fa-headphones,
+.fa-tv,
+.navtop__settingsbtn-darkmode,
+.navtop__settingsbtn,
+.prefbtn {
+	transition: background-color 1s, color 1s;
+}
+
+@keyframes toggleSettings {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(-125%);
+		background-color: #999;
+	}
+}
+
+@keyframes toggleSettings2 {
+	from {
+	}
+	to {
+		background-color: #ddd;
+	}
+}
+
+@keyframes togglePrefBtn {
+	from {
+	}
+	to {
+		background-color: #555e61;
+		transform: translateX(-20px);
+	}
+}
+
+@keyframes togglePrefBtn2 {
+	from {
+		background-color: #555e61;
+		transform: translateX(-20px);
+	}
+	to {
+		background-color: #4285f4;
+		transform: translateX(0);
+	}
+}
+

@@ -42,7 +42,8 @@ const loginSmallText = document.querySelector('.navtop__login-smalltext')
 const loginLink = document.querySelectorAll('.navtop__login-link')
 const loginWhiteText = document.querySelector('.navtop__login-btnwhitetext')
 const facebookIcon = document.querySelectorAll('.fa-facebook')
-const appleIcon = document.querySelectorAll('.fa-apple')
+const appleIconSitemap = document.querySelector('#sitemapapple')
+const appleIconLogin = document.querySelector('#loginapple')
 const googleIcon = document.querySelectorAll('.fa-google')
 const mailIcon = document.querySelector('.fa-envelope')
 const loginBtns = document.querySelectorAll('.standardloginbutton')
@@ -128,10 +129,12 @@ const dropdowns = document.querySelectorAll('.regionbar__li-dropdown')
 const scores = document.querySelector('.scores')
 const days = document.querySelector('.scores__days')
 const navBtns = document.querySelectorAll('.scores__navbtn')
+const scoresNav=document.querySelector('.scores__nav')
 const navBtnActive = document.querySelector('.navbtnactive')
 const daysUlList = document.querySelector('.scores__daylist-day')
 const daysList = document.querySelectorAll('.scores__daylist-day')
 const activeDay = document.querySelector('.active')
+const scoresBtnBox=document.querySelector('.scores__selectbtnbox')
 const daysBtn = document.querySelector('.scores__maincontrolbtn')
 const daysBtnDate = document.querySelector('.scores__maincontrolbtn-text')
 const previousBtn = document.querySelector('#leftbtn')
@@ -171,6 +174,7 @@ const sitemapLinks = document.querySelectorAll('.sitemap__flashscorebox--link')
 const sitemapInvisible = document.querySelector('.sitemap__heading--invisible')
 const sitemapMobileText = document.querySelector('.sitemap__mobile--text')
 const sitemapBtns = document.querySelectorAll('.sitemap__btn')
+const sitemapBackground=document.querySelector('.white-background')
 
 // FOOTER
 const footerContainer = document.querySelector('.footer-container')
@@ -340,6 +344,7 @@ const scoresNavActive = e => {
 		e.target.classList.add('textwhite')
 	}
 }
+
 // POPUP Windows
 const addClasses = () => {
 	main.classList.add('blur')
@@ -498,6 +503,7 @@ const selectOptionThree = e => {
 
 //Pref
 const showPreferences = () => {
+	hideSettings()
 	pref.classList.remove('hide')
 	main.classList.add('disabled')
 	addClasses()
@@ -697,10 +703,25 @@ const setCurrentDate = () => {
 const updateDate2 = () => {
 	for (let i = 0; i < 7; i++) {
 		const date1 = new Date()
+		// console.log(date1.getTime());
 		date1.setDate(date1.getDate() - 7 + i)
 		const dayOfTheMonth = date1.toJSON().slice(5, 10)
-		const newDay = new Date(-86400000 + 86400000 * i)
-		const day = newDay.toDateString('default', { weekday: 'long' }).slice(0, 2).toUpperCase()
+		const newDay = new Date().getTime()-7*((86400000)) +(86400000) * i
+		console.log(newDay);
+
+		const secondsIntoDate = () => {
+			let date= new Date(newDay)
+			console.log(date)
+			const day = date.toDateString('default', { weekday: 'long' }).slice(0, 2).toUpperCase()
+		}
+		secondsIntoDate()
+		// const newDayDigits=((new Date()).getTime())
+		// console.log(newDayDigits);
+		// const newDayDigits2=(newDayDigits)+ (86400000 * i)
+		// console.log(newDayDigits2);
+		// console.log(newDayDigits2 +date.toString())
+		// const newDay = new Date(86400000 * i)
+		// const day = newDay.toDateString('default', { weekday: 'long' }).slice(0, 2).toUpperCase()
 		daysList[i].textContent = `${day}`
 		daysList[i].textContent = `${dayOfTheMonth} ${day}`
 	}
@@ -711,7 +732,7 @@ const updateDate3 = () => {
 		const date1 = new Date()
 		date1.setDate(date1.getDate() - 7 + i)
 		const dayOfTheMonth = date1.toJSON().slice(5, 10)
-		const newDay = new Date(-86400000 + 86400000 * i)
+		const newDay = new Date(86400000 *i)
 		const day = newDay.toDateString('default', { weekday: 'long' }).slice(0, 2).toUpperCase()
 		daysList[i].textContent = `${day}`
 		daysList[i].textContent = `${dayOfTheMonth} ${day}`
@@ -775,6 +796,7 @@ const lightMode = () => {
 	loginLink.forEach(login => login.classList.toggle('black'))
 	facebookIcon.forEach(icon => icon.classList.toggle('blue'))
 	googleIcon.forEach(icon => icon.classList.toggle('white'))
+	appleIconLogin.classList.toggle('black')
 	mailIcon.classList.toggle('grey')
 
 	search.classList.toggle('white')
@@ -793,6 +815,7 @@ const lightMode = () => {
 	pref.classList.toggle('white')
 	prefLi.forEach(li => li.classList.toggle('bg-grey-e9'))
 	prefLi.forEach(li => li.classList.toggle('black'))
+	prefLi.forEach(li=>li.classList.toggle('listelementcolors'))
 	// prefActiveLi.classList.toggle('bg-grey-e9')
 	prefActiveLi.classList.toggle('navtop__pref-mainbox-listelement-activelm')
 	prefLiHeader.classList.toggle('verylightblack')
@@ -841,6 +864,7 @@ const lightMode = () => {
 	scores.classList.toggle('white')
 	days.classList.toggle('white')
 	daysList.forEach(day => day.classList.toggle('verylightblack'))
+	scoresNav.classList.toggle('white')
 
 	navBtns.forEach(element => element.classList.toggle('verylightblack'))
 	navBtns.forEach(element => element.classList.toggle('eee'))
@@ -880,14 +904,39 @@ const lightMode = () => {
 	sitemapInvisible.classList.toggle('transparent')
 	sitemapBtns.forEach(element => element.classList.toggle('bgblack'))
 	sitemapBtns.forEach(element => element.classList.toggle('darkhover'))
+	sitemapBackground.classList.toggle('white')
 
-	footerContainer.classList.toggle('white')
 	footerLite.classList.toggle('verylightblack')
 	footerLink.classList.toggle('verylightblack')
 	footerText.forEach(element => element.classList.toggle('verylightblack'))
 
 	prefBtn.classList.toggle('white')
+
+	const mediaQueriesSmall = () => {
+		const x=window.matchMedia('(max-width:799px)')
+		if(x.matches){
+			scoresBtnBox.classList.toggle('lightgrey')
+			standings.forEach(standing=>standing.innerHTML=`<i class="fa-solid fa-share-nodes"></i>`)
+		}
+		else{
+			scoresBtnBox.classList.remove('lightgrey')
+			scoresBtnBox.classList.toggle('white')
+		}
+	}
+	mediaQueriesSmall()
 }
+
+
+
+const mediaQueriesSmall = () => {
+	const x=window.matchMedia('(max-width:799px)')
+	if(x.matches){
+		standings.forEach(standing=>standing.innerHTML=`<i class="fa-solid fa-share-nodes"></i>`)
+	}
+}
+
+
+mediaQueriesSmall()
 // showPreferences()
 lightMode()
 setCurrentDate()

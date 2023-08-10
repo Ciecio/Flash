@@ -1,37 +1,38 @@
 @media (max-width: 638px) {
-	body{
+	body {
 		// padding: 0 0.5em;
-		width: 100vw;
-		// overflow-x: hidden;
+		width: 100%;
+		overflow-x: hidden;
 	}
 
 	.container-top {
 		padding: 0 0.5em;
 		justify-content: space-between;
+		width: 100%;
 	}
 
 	.container-box {
+		width: 100%;
+	}
+	
+	.container {
 		height: 80px;
-		width: 90vw;
-		max-width: 90vw;
+		width: 100%;
 	}
 
 	.container-box .container {
-		margin-top: 2em;
+		height: auto;
 	}
 
-	.container {
-		height: 80px;
-		width: 90vw;
-		max-width: 90vw;
-	}
-	
 	.aside-div {
 		display: none;
 	}
 
 	.navtop {
-		width: 95vw;
+		margin-bottom: 1em;
+		height: 92px;
+		height: 100px;
+		width: 100%;
 
 		&__element {
 			padding: 0 0.5em;
@@ -91,21 +92,33 @@
 			top: 8px;
 			right: 0;
 			display: grid;
-			grid-template-columns: repeat(5, 1fr);
+			grid-template-columns: repeat(4, 40px);
 			grid-template-rows: repeat(2, 0.1fr);
+			height: 62px;
 		}
 
 		&__logo {
 			font-size: 1.5rem;
 			padding-left: 0;
+
 			&-img {
+				margin-bottom: auto;
 				width: 35px;
+			}
+
+			&-text{
+				margin: 0.4em 0 auto 0;
 			}
 		}
 
 		&__toolicon {
+			display: flex;
+			align-items: center;
+			justify-self: flex-end;
 			padding: 0.35em 0.7em;
-			margin: 0.5em 0.1em;
+			margin: 0 .1em;
+			height: 32px;
+			width: 32px;
 
 			&-search {
 				grid-column: 2/3;
@@ -117,6 +130,7 @@
 
 			&-settings {
 				grid-column: 4/5;
+				margin-right: .5em;
 			}
 
 			&-logintext {
@@ -132,13 +146,13 @@
 		&__login,
 		&__pref,
 		&__settingspanel {
-			width: 100vw;
+			width: 100%;
 			max-width: 538px;
 		}
 
 		&__settings {
 			left: -10px;
-			width: 100vw;
+			width: 100%;
 		}
 
 		&__search {
@@ -194,7 +208,7 @@
 				}
 
 				&-logo {
-					width: 40px;
+					width: 35px;
 				}
 			}
 
@@ -223,7 +237,7 @@
 				&-btn {
 					margin: 0 0.55em;
 					margin-bottom: 1em;
-					width: 100vw;
+					width: 100%;
 				}
 			}
 
@@ -261,7 +275,7 @@
 
 				&-element {
 					padding: 1em;
-					width: 80vw;
+					width: 80%;
 				}
 
 				&-filterslist {
@@ -283,14 +297,14 @@
 
 	.regionbar {
 		display: none;
-		width: 100vw;
 		position: absolute;
 		top: 205px;
+		padding: 1.2em;
 		width: 100%;
 		height: auto;
-		overflow: hidden;
-		background-color: white;
 		background-color: #010a0f;
+		background-color: white;
+		overflow: hidden;
 		z-index: 100;
 
 		&__heading {
@@ -300,32 +314,28 @@
 		&__region {
 			font-size: 1.3rem;
 		}
-
-		// &__li{
-		// 	&-star{
-		// 		position: relative;
-		// 	}
-		// }
 	}
 
 	.navcategories {
-		padding: 1em;
-		width: 90%;
+		justify-content: space-between;
+		margin: 0;
+		padding-right: 1em;
+		width: 100%;
 
 		&__element {
 			position: relative;
 			display: flex;
 			flex-direction: column;
+			align-items: center;
+			margin: 0;
+			padding: 1em 0.5em 0;
+			height: 100%;
 			font-size: 0.9rem;
-			margin: 0 0.5em;
-			padding: 1em 0.5em;
 
-
-			&:nth-of-type(8),
-			&:nth-of-type(4),
 			&:nth-of-type(5),
 			&:nth-of-type(6),
-			&:nth-of-type(7) {
+			&:nth-of-type(7),
+			&:nth-of-type(8) {
 				display: none;
 			}
 
@@ -343,11 +353,20 @@
 
 		&__morebtn {
 			flex-direction: column-reverse;
+			justify-content: center;
+			padding: 0;
+			margin: 0 0em .6em 0;
 		}
 
 		&__menu {
-			width: 100vw;
+			right: 0;
 			height: auto;
+			width: 100%;
+			overflow: auto;
+
+			&-element{
+				width: 100%;
+			}
 
 			&-number {
 				margin-left: auto;
@@ -355,25 +374,28 @@
 		}
 	}
 
-main{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 90vw;
-}
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
 
 	.scores {
-		width: 80vw;
+		padding: 0;
+		margin-top:0;
+		width: 100%;
 
 		&__nav {
-			padding-right: 1.5em;
-			// padding: 0;
-			width: 100vw;
-			overflow-x: scroll;
 			flex-wrap: wrap;
+			padding: 1em 0 0 0;
+			margin-left: 0;
+			width: 100%;
+			overflow-x: scroll;
 		}
 
 		&__navbtn {
+			margin-bottom: 1.2em;
 			font-size: 1.2rem;
 
 			&:nth-of-type(5) {
@@ -382,27 +404,28 @@ main{
 		}
 
 		&__selectbtnbox {
-			margin: 1em 0.5em;
 			display: flex;
 			justify-self: center;
 			align-content: center;
-			justify-content: center;
-			padding-right: 0;
-			width: 90vw;
+			justify-content: space-between;
+			padding: 1em;
+			margin-right: 0;
+			width: 100%;
 		}
 
 		&__maincontrolbtn {
-			width: 60vw;
+			margin: 0 0.5em;
+			width: 70%;
 		}
 
 		&__controlbtn {
-			width: 10vw;
+			width: 30px;
 		}
 
 		&__days {
 			top: 5.5%;
-			right: 5%;
-			width: 100vw;
+			right: 5.3%;
+			width: 90%;
 		}
 
 		&__daylist {
@@ -424,8 +447,12 @@ main{
 			}
 		}
 
+		&__leaguelivetop{
+			padding: 0 .5em;
+		}
+
 		&__leaguelivebottom {
-			padding: 0.5em;
+			padding: .5em;
 		}
 
 		&__time {
@@ -434,6 +461,8 @@ main{
 		}
 
 		&__livebtn {
+			margin: 0;
+			padding: .5em .1em;
 			order: 3;
 		}
 
@@ -443,37 +472,44 @@ main{
 
 		&__previewbtn,
 		&__audiobtn,
-		&__channelsbtn,
-		&__standingsbtn {
+		&__channelsbtn
+		{
 			display: none;
+		}
+
+		&__standingsbtn{
+			margin-left: auto;
 		}
 
 		&__teamname {
 			padding: 0.1em 0.2em;
+			&:nth-of-type(odd){
+				margin-bottom: .1em;
+			}
 		}
 
-		// &__livebtn{
-		// 	margin-left: auto;
-		// }
-
 		&__showbtn {
-			margin-left: auto;
+			margin:0 .5em 0 1em;
 			font-size: 1.5rem;
-			// width: 50%;
 		}
 	}
 
 	.sitemap {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: flex-start;
 
 		&__flashscorebox,
 		&__media,
 		&__mobile {
-			margin: 1em 0;
+			margin: 0.5em 0;
+			padding-right: 2em;
 			height: auto;
-			width: 45%;
+			width: 50%;
+
+			&-link{
+				width: 50%;
+			}
 		}
 
 		&__btn {
@@ -493,26 +529,44 @@ main{
 		}
 	}
 
-	main{
-		width: 100vw;
+	main {
+		padding: 0;
+		width: 100%;
 	}
 
 	.mainboxbottom {
-		width: 100vw;
-		padding: 0 1em;
+		padding: 0;
+		width: 100%;
+	}
+
+	.mainbox{
+		margin-top: 0;
+		width: 100%;
 	}
 
 	.extracontent {
-		margin-bottom: 0.5em;
+		display: flex;
+		flex-direction: column;
+		margin: 1em 0 0.5em 0;
+		padding: 1em 2em 1em .5em;
+		width: 100%;
+
+		&__text{
+			padding: 0 .5em;
+		}
 	}
 
 	.sitemap,
 	.sitemapbottom {
+		padding-top: 1.5em;
 		margin-top: 0;
+		width: 100%;
 	}
 
 	.footer-container {
-		width: 100vw;
+		margin-bottom: 6em;
+		padding: 0;
+		width: 100%;
 	}
 
 	.footer {
@@ -521,6 +575,7 @@ main{
 		align-items: flex-start;
 		justify-content: center;
 		margin-top: 1em;
+		padding: 2em 1.2em;
 		height: auto;
 
 		&__liteversion {
@@ -555,20 +610,20 @@ main{
 	}
 }
 
-@media (min-width: 380px) and (max-width:640px) {
+@media (min-width: 380px) and (max-width: 640px) {
 	.navcategories {
 		&__element {
-			&:nth-of-type(4) {
+			&:nth-of-type(5) {
 				display: flex;
 			}
 		}
 	}
 }
 
-@media (min-width: 430px) and (max-width:640px) {
+@media (min-width: 430px) and (max-width: 640px) {
 	.navcategories {
 		&__element {
-			&:nth-of-type(5) {
+			&:nth-of-type(6) {
 				display: flex;
 			}
 		}
@@ -580,14 +635,14 @@ main{
 		}
 
 		&__navbtn {
-			&:nth-of-type(6) {
+			&:nth-of-type(5) {
 				display: block;
 			}
 		}
 	}
 }
 
-@media (min-width: 480px) and (max-width:640px) {
+@media (min-width: 480px) and (max-width: 640px) {
 	.navcategories {
 		&__element {
 			&:nth-of-type(7) {
@@ -595,9 +650,15 @@ main{
 			}
 		}
 	}
+
+	.scores{
+		&__maincontrolbtn{
+			width: 85%;
+		}
+	}
 }
 
-@media (min-width: 530px) and (max-width:640px) {
+@media (min-width: 530px) and (max-width: 640px) {
 	.navcategories {
 		&__element {
 			&:nth-of-type(8) {

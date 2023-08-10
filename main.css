@@ -29,8 +29,16 @@ button {
   align-items: center;
 }
 
+.containerbox .container {
+  height: 60px;
+}
+
 .container {
   max-width: 1048px;
+}
+
+.container-box {
+  border-bottom: 1px solid #999;
 }
 
 .fa-star {
@@ -49,7 +57,7 @@ button {
   height: 40px;
   background-color: #0f2d37;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 .modalwindow {
@@ -62,6 +70,7 @@ button {
 }
 
 .nav__active {
+  color: #ff0046;
   border-bottom: 3px solid #ff0046;
 }
 
@@ -89,7 +98,7 @@ button {
   display: flex;
   align-items: center;
   padding: 1em 1.5em;
-  height: 84px;
+  height: 88px;
   background-color: #001e28;
   color: #ddd;
   font-size: 1.3rem;
@@ -124,7 +133,7 @@ button {
   color: #fff;
   font-size: 0.8rem;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .navtop__toolicon {
   margin: 0.5em;
@@ -132,7 +141,7 @@ button {
   background-color: #0f2d37;
   color: rgb(200, 205, 205);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: background-color 0.3s;
 }
 .navtop__toolicon:hover {
@@ -151,11 +160,11 @@ button {
   padding: 0.2em;
   font-size: 1.5rem;
   border: 1px solid rgb(200, 205, 205);
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .navtop__settings {
   position: absolute;
-  top: 90px;
+  top: 80px;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -175,7 +184,7 @@ button {
   background-color: #010a0f;
   color: #eee;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   z-index: 100;
 }
 .navtop__settingsbtn-icon {
@@ -208,7 +217,7 @@ button {
 }
 .navtop__search, .navtop__login, .navtop__pref, .navtop__settingspanel {
   position: absolute;
-  top: 100px;
+  top: 92px;
   display: flex;
   flex-direction: column;
   width: 538px;
@@ -216,16 +225,15 @@ button {
   z-index: 3001;
 }
 .navtop__search {
-  padding: 2em 3em;
+  padding: 1.5em 0;
   min-height: 320px;
   background-color: rgb(1, 10, 15);
   height: 80vh;
-  overflow: scroll;
-  overflow-x: hidden;
 }
 .navtop__search-top {
   display: flex;
   justify-content: space-between;
+  padding: 0 1em 0 2em;
   border-bottom: 1px solid #0f2d37;
 }
 .navtop__search-heading {
@@ -238,12 +246,18 @@ button {
   color: #999;
   cursor: pointer;
 }
+.navtop__search-list {
+  padding: 0 2.4em;
+  overflow-y: scroll;
+}
 .navtop__search-inputbox {
   display: flex;
   align-items: center;
+  align-self: center;
   justify-content: space-between;
-  padding: 0.5em;
+  padding: 0.3em;
   margin: 2em 0;
+  width: 92%;
   border: 2px solid #c8cdcd;
   border-radius: 1em;
 }
@@ -260,11 +274,11 @@ button {
 }
 .navtop__search-inputbox-btn {
   padding: 0.5em 1.2em;
-  width: 40%;
+  width: 33.5%;
+  color: #ddd;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ddd;
 }
 .navtop__search-inputbox-dropdown {
   font-size: 1.6rem;
@@ -272,30 +286,32 @@ button {
 }
 .navtop__search-sportslist {
   position: absolute;
-  top: 22%;
-  right: 2%;
+  top: 19.5%;
+  right: 4%;
   padding: 0.5em;
   width: 30%;
   height: 75%;
   background-color: #010a0f;
-  border: none;
+  border: 1px solid #ddd;
   overflow: auto;
   z-index: 2000;
 }
 .navtop__search-sportslist-element {
-  padding: 0.25em 0.5em;
+  padding: 0.5em;
   font-size: 1.3rem;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
 }
 .navtop__search-sportslist-element-active {
   background-color: #ff0046;
 }
 .navtop__search-text {
+  padding: 0 2em;
   margin-bottom: 1em;
   font-size: 1.3rem;
 }
 .navtop__search-mostpopular {
+  padding: 0 2em;
   font-size: 1.2rem;
   text-transform: uppercase;
 }
@@ -307,7 +323,7 @@ button {
   align-items: center;
   padding: 0.5em;
   margin: 1em 0;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
 }
 .navtop__search-listelement:hover {
@@ -317,7 +333,7 @@ button {
   margin-right: 1.5em;
   width: 30px;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .navtop__search-texttop {
   margin-bottom: 0.2em;
@@ -353,13 +369,14 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1.4em;
-  width: 60%;
+  margin-bottom: 0.5em;
+  padding: 1em 1em 0.5em;
+  width: 59.5%;
   background-color: #001e28;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .navtop__login-text {
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 0;
   font-size: 1.3rem;
 }
 .navtop__login-cardbox {
@@ -373,7 +390,7 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0.5em 1em;
+  padding: 0em 1em 0.5em;
   font-size: 1.2rem;
 }
 .navtop__login-icon {
@@ -426,12 +443,15 @@ button {
   text-decoration: none;
 }
 .navtop__settingspanel {
-  padding: 1em 2.4em;
+  padding: 0 2.4em 1em;
+  height: 78vh;
   background-color: rgb(1, 10, 15);
+  overflow-y: scroll;
 }
 .navtop__settingspanel-top {
   display: flex;
   align-items: center;
+  padding: 0.85em 0;
   border-bottom: 1px solid #0f2d37;
 }
 .navtop__settingspanel-icon {
@@ -445,12 +465,12 @@ button {
   font-size: 1.8rem;
 }
 .navtop__settingspanel-header {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   font-size: 1.6rem;
   font-weight: bold;
 }
 .navtop__settingspanel-panel {
-  padding: 2.5em 0;
+  padding: 2.7em 0;
   border-bottom: 1px solid #0f2d37;
 }
 .navtop__settingspanel-panel:last-child {
@@ -488,8 +508,7 @@ button {
 }
 .navtop__pref {
   position: fixed;
-  top: 10%;
-  padding: 1.2em;
+  top: 15%;
   width: 730px;
   background-color: #02171f;
 }
@@ -509,7 +528,6 @@ button {
 }
 .navtop__pref-mainbox {
   display: flex;
-  margin-top: 1em;
   border-bottom: 1px solid #0f2d37;
 }
 .navtop__pref-mainbox-list {
@@ -527,12 +545,22 @@ button {
   border-radius: 8px;
 }
 .navtop__pref-mainbox-listelement {
-  padding: 1.2em;
+  position: relative;
+  padding: 1.2em 1.2em 1.2em 2em;
   background-color: #0f2d37;
   font-size: 1.2rem;
   font-weight: bold;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgb(0, 20, 30);
   cursor: pointer;
+}
+.navtop__pref-mainbox-listelement:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 10px;
+  background-color: rgb(0, 20, 30);
+  content: "";
 }
 .navtop__pref-mainbox-btnbox {
   display: flex;
@@ -596,7 +624,7 @@ button {
   height: 1em;
   width: 3em;
   background-color: #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .navtop__pref-mainbox-textbox-button:before {
   position: absolute;
@@ -767,7 +795,7 @@ button {
   padding: 0.5em;
   max-width: 25px;
   background-color: #3860be;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .navtop__pref-vendorsbox-element-privacylist {
   margin-top: 1em;
@@ -844,7 +872,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2em 0;
+  padding: 2em;
 }
 .navtop__pref-btnbox-btn {
   padding: 1em 2em;
@@ -875,27 +903,23 @@ button {
 .navcategories {
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 2em;
   width: 100%;
-  height: 50px;
-  border-bottom: 1px solid #0f2d37;
+  height: 60px;
 }
 .navcategories__element {
   position: relative;
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr, 2fr, 5fr, 1fr;
   grid-template-rows: repeat(3, 1fr);
-  padding: 0.5em 0em;
+  margin: 0 0.35em;
+  padding: 0;
   color: rgb(200, 205, 205);
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.3rem;
   cursor: pointer;
-}
-.navcategories__element:first-of-type {
-  margin-right: 1em;
 }
 .navcategories__element:hover {
   color: #fff;
@@ -905,7 +929,7 @@ button {
   top: -20%;
   padding: 0.25em 0.5em;
   margin-left: 0.5em;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #999;
   font-size: 1rem;
   grid-column: 4/5;
@@ -916,17 +940,23 @@ button {
   z-index: -50;
   grid-column: 1/2;
   grid-row: 2/3;
+  font-size: 2rem;
 }
 .navcategories__element-text {
   grid-column: 2/5;
   grid-row: 2/3;
+  pointer-events: none;
 }
 .navcategories__element-text-favorites {
   grid-column: 2/4;
 }
+.navcategories__firstelement {
+  margin-right: 3em;
+  margin-left: 0;
+}
 .navcategories__morebtn {
-  display: flex;
   align-items: center;
+  margin-left: auto;
   cursor: pointer;
 }
 .navcategories__menu {
@@ -938,7 +968,7 @@ button {
   flex-wrap: wrap;
   padding: 1em;
   background-color: #010a0f;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 620px;
   height: 410px;
   z-index: 100;
@@ -950,7 +980,7 @@ button {
   padding: 1em;
   color: #ddd;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .navcategories__menu-text {
   font-size: 1.3rem;
@@ -969,7 +999,7 @@ button {
   margin-left: 0.4em;
   padding: 0.2em 0.5em;
   width: 16px;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #3f4446;
 }
 .navcategories__menu-number:hover {
@@ -990,13 +1020,14 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 2.4em;
 }
 
 .regionbar {
   display: flex;
   flex-direction: column;
-  padding: 0.7em;
-  width: 170px;
+  padding: 0.7em 0.7em 0.7em 0.2em;
+  width: 156px;
 }
 .regionbar__heading {
   margin: 3em 0 1.5em;
@@ -1034,7 +1065,9 @@ main {
   position: relative;
   display: flex;
   align-items: center;
+  padding-left: 1em;
   margin: 0;
+  border-radius: 8px;
 }
 .regionbar__li-flag {
   width: 18px;
@@ -1056,7 +1089,7 @@ main {
   background-color: transparent;
   color: #ff0046;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   -moz-text-align-last: left;
        text-align-last: left;
   text-transform: uppercase;
@@ -1078,16 +1111,19 @@ main {
   display: flex;
   align-items: center;
   padding: 1em 0;
+  background-color: #001e28;
 }
 .scores__navbtn {
-  padding: 0.5em 1em;
-  margin: 0.5em;
+  padding: 0.6em 1em;
+  margin: 0.4em;
   background-color: #001e28;
   color: rgb(200, 205, 205);
-  border-radius: 5px;
+  border-radius: 8px;
   border: none;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 0.4px;
 }
 .scores__navbtn:hover {
   background-color: #555e61;
@@ -1101,13 +1137,18 @@ main {
   background-color: #010a0f;
   color: rgb(200, 205, 205);
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .scores__controlbtn:hover, .scores__maincontrolbtn:hover {
   background-color: rgba(175, 169, 169, 0.3);
 }
 .scores__controlbtn-calendar, .scores__maincontrolbtn-calendar {
   pointer-events: none;
+}
+.scores__controlbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .scores__maincontrolbtn {
   padding: 0.5em;
@@ -1116,14 +1157,17 @@ main {
 .scores__maincontrolbtn-calendar {
   margin-right: 0.5em;
 }
+.scores__maincontrolbtn-text {
+  font-size: 1.2rem;
+}
 .scores__days {
   position: absolute;
   top: 3%;
   right: 0.5em;
-  padding: 0.5em;
+  padding: 1.2em;
   width: 165px;
   background-color: #010a0f;
-  border-radius: 5px;
+  border-radius: 8px;
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 10px 0px;
   z-index: 100;
@@ -1134,17 +1178,23 @@ main {
   justify-content: center;
 }
 .scores__daylist-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0.1em;
   padding: 0.1em 0.5em;
+  height: 24px;
   font-size: 1.2rem;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
 }
 .scores__selectbtnbox {
   display: flex;
   align-items: center;
   margin-left: auto;
+  margin: 0 0.5em 0 auto;
   height: 50%;
+  background-color: #001e28;
 }
 .scores__leaguelivetop, .scores__leaguelivebottom {
   display: flex;
@@ -1152,9 +1202,10 @@ main {
   padding: 0 1em;
 }
 .scores__leaguelivetop {
+  padding: 0.17em 1em;
   width: 100%;
   background-color: #001e28;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .scores__leaguelivetop-flag {
   margin-right: 0.5em;
@@ -1205,7 +1256,7 @@ main {
   background-color: #555e61;
   font-size: 1rem;
   color: #ddd;
-  border-radius: 5px;
+  border-radius: 8px;
   z-index: 100;
 }
 .scores__leaguelivebottom-popup {
@@ -1227,7 +1278,7 @@ main {
   background-image: url("./sts.jpg");
   background-size: cover;
   background-position: center;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .scores__leaguelivebottom-channelpopup {
   top: 40px;
@@ -1261,7 +1312,7 @@ main {
   background-image: url("/sts.jpg");
   background-size: cover;
   background-position: center;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 .scores__leaguelivebottom-channelpopup-img-superbet {
   background-image: url("./superbet.jpg");
@@ -1273,7 +1324,7 @@ main {
   background-image: url("./fortuna.jpg");
 }
 .scores__star, .scores__time, .scores__teamname {
-  padding: 0.5em 1em;
+  padding: 0.29em 1em;
   font-size: 1.3rem;
 }
 .scores__star {
@@ -1284,7 +1335,7 @@ main {
   align-items: center;
 }
 .scores__star {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: gold;
 }
 .scores__flag {
@@ -1296,7 +1347,7 @@ main {
   padding: 0.5em 1em;
   color: rgb(200, 205, 205);
   font-size: 1.3rem;
-  border-radius: 5px;
+  border-radius: 8px;
   text-decoration: none;
 }
 .scores__audiobtn {
@@ -1342,28 +1393,35 @@ main {
   align-items: center;
 }
 
-.sitemap, .sitemapbottom {
+.sitemap,
+.sitemapbottom {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  margin-top: 3em;
+  margin-top: 1.5em;
   width: 100%;
   font-size: 1.3rem;
 }
-.sitemap__flashscorebox, .sitemap__media, .sitemap__mobile, .sitemapbottom__flashscorebox, .sitemapbottom__media, .sitemapbottom__mobile {
+.sitemap__flashscorebox, .sitemap__media, .sitemap__mobile,
+.sitemapbottom__flashscorebox,
+.sitemapbottom__media,
+.sitemapbottom__mobile {
   display: flex;
   flex-direction: column;
   height: 216px;
   line-height: 1.5em;
 }
-.sitemap__mobile, .sitemapbottom__mobile {
+.sitemap__mobile,
+.sitemapbottom__mobile {
   padding: 0.5em 0.1em;
 }
-.sitemap__media--icon, .sitemapbottom__media--icon {
+.sitemap__media--icon,
+.sitemapbottom__media--icon {
   font-size: 1.4rem;
   margin-right: 0.5em;
 }
-.sitemap__heading, .sitemapbottom__heading {
+.sitemap__heading,
+.sitemapbottom__heading {
   margin-bottom: 0.5em;
   padding: 0.5em 0 0.5em 0.85em;
   text-transform: uppercase;
@@ -1371,27 +1429,34 @@ main {
   color: #eee;
   font-size: 1.3rem;
 }
-.sitemap__heading--invisible, .sitemapbottom__heading--invisible {
+.sitemap__heading--invisible,
+.sitemapbottom__heading--invisible {
   color: transparent;
   z-index: -1000;
 }
-.sitemap__heading-mobile, .sitemapbottom__heading-mobile {
+.sitemap__heading-mobile,
+.sitemapbottom__heading-mobile {
   padding-left: 0;
 }
-.sitemap__flashscorebox--link, .sitemap__mobile--text, .sitemapbottom__flashscorebox--link, .sitemapbottom__mobile--text {
+.sitemap__flashscorebox--link, .sitemap__mobile--text,
+.sitemapbottom__flashscorebox--link,
+.sitemapbottom__mobile--text {
   padding: 0.5em 1em;
   padding-right: 0;
   color: #eee;
   text-decoration: none;
 }
-.sitemap__flashscorebox--link:hover, .sitemapbottom__flashscorebox--link:hover {
+.sitemap__flashscorebox--link:hover,
+.sitemapbottom__flashscorebox--link:hover {
   text-decoration: underline;
 }
-.sitemap__mobile--text, .sitemapbottom__mobile--text {
+.sitemap__mobile--text,
+.sitemapbottom__mobile--text {
   margin-bottom: 1em;
   padding-left: 0;
 }
-.sitemap__btn, .sitemapbottom__btn {
+.sitemap__btn,
+.sitemapbottom__btn {
   display: flex;
   align-items: center;
   margin-bottom: 0.5em;
@@ -1400,12 +1465,14 @@ main {
   height: 30px;
   background-color: transparent;
   border: 1px solid rgb(200, 205, 205);
-  border-radius: 5px;
+  border-radius: 8px;
 }
-.sitemap__btn:hover, .sitemapbottom__btn:hover {
+.sitemap__btn:hover,
+.sitemapbottom__btn:hover {
   background-color: rgba(122, 118, 118, 0.5);
 }
-.sitemap__btn--text, .sitemapbottom__btn--text {
+.sitemap__btn--text,
+.sitemapbottom__btn--text {
   display: flex;
   flex-direction: column;
   color: #c8cdcd;
@@ -1413,26 +1480,34 @@ main {
   text-align: left;
   text-decoration: none;
 }
-.sitemap__btn--span, .sitemapbottom__btn--span {
+.sitemap__btn--span,
+.sitemapbottom__btn--span {
   font-size: 1.1rem;
   color: #ddd;
 }
-.sitemap__btn--spanone, .sitemapbottom__btn--spanone {
+.sitemap__btn--spanone,
+.sitemapbottom__btn--spanone {
   font-size: 1.3rem;
 }
-.sitemap__btn--icon, .sitemapbottom__btn--icon {
+.sitemap__btn--icon,
+.sitemapbottom__btn--icon {
   display: flex;
   padding: 0 0.2em;
   font-size: 1.4rem;
   color: #fff;
 }
-.sitemap__btn--icontwo, .sitemapbottom__btn--icontwo {
+.sitemap__btn--icontwo,
+.sitemapbottom__btn--icontwo {
   color: aqua;
 }
-.sitemap__btn--iconthree, .sitemapbottom__btn--iconthree {
+.sitemap__btn--iconthree,
+.sitemapbottom__btn--iconthree {
   color: tomato;
 }
 
+.sitemapbottom {
+  margin-top: 3em;
+}
 .sitemapbottom__mobile {
   padding: 0 1em;
   grid-column: 4/-1;
@@ -1463,7 +1538,7 @@ main {
   display: flex;
   align-items: center;
   margin-top: 3em;
-  padding: 0.5em 1em;
+  padding: 0.5em 1em 0;
   height: 81px;
   border-top: 3px solid #0f2d37;
   font-size: 1.2rem;
@@ -1482,7 +1557,7 @@ main {
 }
 .footer__liteversion {
   color: #ddd;
-  margin-right: 17.7em;
+  margin-right: 14em;
 }
 .footer__liteversion:hover {
   text-decoration: none;
@@ -1531,6 +1606,10 @@ main {
 
 .fa-headphones {
   padding: 0.5em;
+}
+
+.navtop .fa-headphones {
+  padding: 0.25em 0.5em;
 }
 
 .navtop__pref-element-checkicon {
@@ -1807,32 +1886,52 @@ body,
   background-color: rgba(122, 118, 118, 0.5);
 }
 
+.white-background {
+  position: absolute;
+  top: 0;
+  left: -300px;
+  width: 5000px;
+  height: 100%;
+  z-index: -10;
+}
+
+.listelementcolors {
+  border-bottom: 1px solid #ddd;
+}
+.listelementcolors:before {
+  background-color: #999;
+  border-left: 1px solid #999;
+  border-right: 1px solid #999;
+}
+
 @media (max-width: 638px) {
   body {
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
   }
   .container-top {
     padding: 0 0.5em;
     justify-content: space-between;
+    width: 100%;
   }
   .container-box {
-    height: 80px;
-    width: 90vw;
-    max-width: 90vw;
-  }
-  .container-box .container {
-    margin-top: 2em;
+    width: 100%;
   }
   .container {
     height: 80px;
-    width: 90vw;
-    max-width: 90vw;
+    width: 100%;
+  }
+  .container-box .container {
+    height: auto;
   }
   .aside-div {
     display: none;
   }
   .navtop {
-    width: 95vw;
+    margin-bottom: 1em;
+    height: 92px;
+    height: 100px;
+    width: 100%;
   }
   .navtop__element {
     padding: 0 0.5em;
@@ -1885,19 +1984,29 @@ body,
     top: 8px;
     right: 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 40px);
     grid-template-rows: repeat(2, 0.1fr);
+    height: 62px;
   }
   .navtop__logo {
     font-size: 1.5rem;
     padding-left: 0;
   }
   .navtop__logo-img {
+    margin-bottom: auto;
     width: 35px;
   }
+  .navtop__logo-text {
+    margin: 0.4em 0 auto 0;
+  }
   .navtop__toolicon {
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
     padding: 0.35em 0.7em;
-    margin: 0.5em 0.1em;
+    margin: 0 0.1em;
+    height: 32px;
+    width: 32px;
   }
   .navtop__toolicon-search {
     grid-column: 2/3;
@@ -1907,6 +2016,7 @@ body,
   }
   .navtop__toolicon-settings {
     grid-column: 4/5;
+    margin-right: 0.5em;
   }
   .navtop__toolicon-logintext {
     display: none;
@@ -1915,12 +2025,12 @@ body,
     font-size: 1.4rem;
   }
   .navtop__search, .navtop__login, .navtop__pref, .navtop__settingspanel {
-    width: 100vw;
+    width: 100%;
     max-width: 538px;
   }
   .navtop__settings {
     left: -10px;
-    width: 100vw;
+    width: 100%;
   }
   .navtop__search-sportslist {
     width: 150px;
@@ -1960,7 +2070,7 @@ body,
     font-size: 2rem;
   }
   .navtop__pref-headerbox-logo {
-    width: 40px;
+    width: 35px;
   }
   .navtop__pref-mainbox {
     flex-wrap: wrap;
@@ -1984,7 +2094,7 @@ body,
   .navtop__pref-btnbox-btn {
     margin: 0 0.55em;
     margin-bottom: 1em;
-    width: 100vw;
+    width: 100%;
   }
   .navtop__pref-vendorsbox {
     height: 65vh;
@@ -2008,7 +2118,7 @@ body,
   }
   .navtop__pref-vendorsbox-element {
     padding: 1em;
-    width: 80vw;
+    width: 80%;
   }
   .navtop__pref-vendorsbox-filterslist {
     top: 110px;
@@ -2023,14 +2133,14 @@ body,
   }
   .regionbar {
     display: none;
-    width: 100vw;
     position: absolute;
     top: 205px;
+    padding: 1.2em;
     width: 100%;
     height: auto;
-    overflow: hidden;
-    background-color: white;
     background-color: #010a0f;
+    background-color: white;
+    overflow: hidden;
     z-index: 100;
   }
   .regionbar__heading {
@@ -2040,18 +2150,22 @@ body,
     font-size: 1.3rem;
   }
   .navcategories {
-    padding: 1em;
-    width: 90%;
+    justify-content: space-between;
+    margin: 0;
+    padding-right: 1em;
+    width: 100%;
   }
   .navcategories__element {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 1em 0.5em 0;
+    height: 100%;
     font-size: 0.9rem;
-    margin: 0 0.5em;
-    padding: 1em 0.5em;
   }
-  .navcategories__element:nth-of-type(8), .navcategories__element:nth-of-type(4), .navcategories__element:nth-of-type(5), .navcategories__element:nth-of-type(6), .navcategories__element:nth-of-type(7) {
+  .navcategories__element:nth-of-type(5), .navcategories__element:nth-of-type(6), .navcategories__element:nth-of-type(7), .navcategories__element:nth-of-type(8) {
     display: none;
   }
   .navcategories__element-zero {
@@ -2065,10 +2179,18 @@ body,
   }
   .navcategories__morebtn {
     flex-direction: column-reverse;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0em 0.6em 0;
   }
   .navcategories__menu {
-    width: 100vw;
+    right: 0;
     height: auto;
+    width: 100%;
+    overflow: auto;
+  }
+  .navcategories__menu-element {
+    width: 100%;
   }
   .navcategories__menu-number {
     margin-left: auto;
@@ -2077,42 +2199,47 @@ body,
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90vw;
+    width: 100%;
   }
   .scores {
-    width: 80vw;
+    padding: 0;
+    margin-top: 0;
+    width: 100%;
   }
   .scores__nav {
-    padding-right: 1.5em;
-    width: 100vw;
-    overflow-x: scroll;
     flex-wrap: wrap;
+    padding: 1em 0 0 0;
+    margin-left: 0;
+    width: 100%;
+    overflow-x: scroll;
   }
   .scores__navbtn {
+    margin-bottom: 1.2em;
     font-size: 1.2rem;
   }
   .scores__navbtn:nth-of-type(5) {
     display: none;
   }
   .scores__selectbtnbox {
-    margin: 1em 0.5em;
     display: flex;
     justify-self: center;
     align-content: center;
-    justify-content: center;
-    padding-right: 0;
-    width: 90vw;
+    justify-content: space-between;
+    padding: 1em;
+    margin-right: 0;
+    width: 100%;
   }
   .scores__maincontrolbtn {
-    width: 60vw;
+    margin: 0 0.5em;
+    width: 70%;
   }
   .scores__controlbtn {
-    width: 10vw;
+    width: 30px;
   }
   .scores__days {
     top: 5.5%;
-    right: 5%;
-    width: 100vw;
+    right: 5.3%;
+    width: 90%;
   }
   .scores__daylist-day {
     font-size: 1.5rem;
@@ -2127,6 +2254,9 @@ body,
     flex-direction: column;
     margin-left: 0.5em;
   }
+  .scores__leaguelivetop {
+    padding: 0 0.5em;
+  }
   .scores__leaguelivebottom {
     padding: 0.5em;
   }
@@ -2135,30 +2265,42 @@ body,
     margin-left: auto;
   }
   .scores__livebtn {
+    margin: 0;
+    padding: 0.5em 0.1em;
     order: 3;
   }
   .scores__star {
     font-size: 1.8rem;
   }
-  .scores__previewbtn, .scores__audiobtn, .scores__channelsbtn, .scores__standingsbtn {
+  .scores__previewbtn, .scores__audiobtn, .scores__channelsbtn {
     display: none;
+  }
+  .scores__standingsbtn {
+    margin-left: auto;
   }
   .scores__teamname {
     padding: 0.1em 0.2em;
   }
+  .scores__teamname:nth-of-type(odd) {
+    margin-bottom: 0.1em;
+  }
   .scores__showbtn {
-    margin-left: auto;
+    margin: 0 0.5em 0 1em;
     font-size: 1.5rem;
   }
   .sitemap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
   .sitemap__flashscorebox, .sitemap__media, .sitemap__mobile {
-    margin: 1em 0;
+    margin: 0.5em 0;
+    padding-right: 2em;
     height: auto;
-    width: 45%;
+    width: 50%;
+  }
+  .sitemap__flashscorebox-link, .sitemap__media-link, .sitemap__mobile-link {
+    width: 50%;
   }
   .sitemap__btn {
     margin: 0 1em 1em 0;
@@ -2171,21 +2313,37 @@ body,
     flex-wrap: wrap;
   }
   main {
-    width: 100vw;
+    padding: 0;
+    width: 100%;
   }
   .mainboxbottom {
-    width: 100vw;
-    padding: 0 1em;
+    padding: 0;
+    width: 100%;
+  }
+  .mainbox {
+    margin-top: 0;
+    width: 100%;
   }
   .extracontent {
-    margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0 0.5em 0;
+    padding: 1em 2em 1em 0.5em;
+    width: 100%;
+  }
+  .extracontent__text {
+    padding: 0 0.5em;
   }
   .sitemap,
   .sitemapbottom {
+    padding-top: 1.5em;
     margin-top: 0;
+    width: 100%;
   }
   .footer-container {
-    width: 100vw;
+    margin-bottom: 6em;
+    padding: 0;
+    width: 100%;
   }
   .footer {
     display: flex;
@@ -2193,6 +2351,7 @@ body,
     align-items: flex-start;
     justify-content: center;
     margin-top: 1em;
+    padding: 2em 1.2em;
     height: auto;
   }
   .footer__liteversion {
@@ -2220,24 +2379,27 @@ body,
   }
 }
 @media (min-width: 380px) and (max-width: 640px) {
-  .navcategories__element:nth-of-type(4) {
+  .navcategories__element:nth-of-type(5) {
     display: flex;
   }
 }
 @media (min-width: 430px) and (max-width: 640px) {
-  .navcategories__element:nth-of-type(5) {
+  .navcategories__element:nth-of-type(6) {
     display: flex;
   }
   .scores__nav {
     overflow: hidden;
   }
-  .scores__navbtn:nth-of-type(6) {
+  .scores__navbtn:nth-of-type(5) {
     display: block;
   }
 }
 @media (min-width: 480px) and (max-width: 640px) {
   .navcategories__element:nth-of-type(7) {
     display: flex;
+  }
+  .scores__maincontrolbtn {
+    width: 85%;
   }
 }
 @media (min-width: 530px) and (max-width: 640px) {
@@ -2247,17 +2409,19 @@ body,
 }
 @media (min-width: 638px) and (max-width: 799px) {
   .container-top {
-    padding: 0 0.5em;
     justify-content: space-between;
+    padding: 0 0.5em;
+    height: 80px;
   }
   .container-box {
     height: 80px;
+    width: 100%;
   }
-  .container-box .container {
-    margin-top: 2em;
+  .container-box {
+    height: 60px;
   }
   .container {
-    width: 100vw;
+    width: 100%;
   }
   .aside-div {
     display: none;
@@ -2266,27 +2430,34 @@ body,
     width: 150px;
   }
   .mainbox {
-    width: 100vw;
+    margin-top: 0;
+    padding: 0 1.2em;
     justify-content: space-between;
+    width: 100%;
   }
   .navtop {
     padding: 0 1em;
-    width: 100vw;
+    width: 100%;
+  }
+  .navtop__right {
+    z-index: 9;
   }
   .navtop__element {
     padding: 0 0.5em;
     margin: 0 1em;
     height: 62px;
+    z-index: 10;
+  }
+  .navtop__logo {
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+  }
+  .navtop__logo-img {
+    width: 40px;
   }
   .navtop__toolicon-logintext {
     display: none;
-  }
-  .navtop__logo {
-    font-size: 1.5rem;
-    padding-left: 0;
-  }
-  .navtop__logo-img {
-    width: 35px;
   }
   .navtop__toolicon {
     padding: 0.35em 0.7em;
@@ -2312,8 +2483,9 @@ body,
     max-width: 538px;
   }
   .navtop__settings {
-    left: -10px;
-    width: 100vw;
+    top: 70px;
+    margin-right: 2em;
+    width: 320px;
   }
   .navtop__search-sportslist {
     width: 150px;
@@ -2415,64 +2587,74 @@ body,
     width: 42%;
   }
   .navcategories {
-    padding: 1em;
+    padding: 0;
+    margin: 0;
+    height: 60px;
+    width: 100%;
   }
   .navcategories__element {
     position: relative;
-    font-size: 1.3rem;
+    align-items: center;
+    justify-content: center;
     margin: 0 0.5em;
-    padding: 1em 0.5em 0 0.5em;
+    height: 60px;
+    font-size: 1.3rem;
   }
   .navcategories__element:nth-of-type(5), .navcategories__element:nth-of-type(6), .navcategories__element:nth-of-type(7), .navcategories__element:nth-of-type(8) {
     display: none;
+  }
+  .navcategories__element:last-of-type {
+    margin: 0 1em 0 auto;
   }
   .navcategories__element--icon {
     margin-bottom: 0.5em;
     font-size: 1.8rem;
   }
-  .navcategories__morebtn {
-    flex-direction: row;
-    align-items: center;
-    margin-left: auto;
+  .navcategories__firstelement {
+    margin-right: 3em;
+    margin-left: 0;
   }
   .navcategories__menu {
-    width: 100vw;
+    right: -1%;
+    width: 100%;
     height: auto;
   }
   .navcategories__menu-number {
     margin-left: auto;
   }
   .scores {
-    width: 65vw;
+    width: 67vw;
   }
   .scores__nav {
-    padding-right: 1.5em;
-    width: 65vw;
     flex-wrap: wrap;
+    padding: 1em 0;
+    width: 100%;
     overflow: hidden;
   }
   .scores__navbtn {
     font-size: 1.2rem;
   }
   .scores__selectbtnbox {
-    margin: 1em 0.5em;
     display: flex;
-    justify-self: center;
     align-content: center;
     justify-content: center;
-    padding-right: 0;
-    width: 65vw;
+    justify-content: space-evenly;
+    margin: 1em 0 0;
+    padding: 1em;
+    width: 100%;
+    border-bottom: 1px solid #fff;
   }
   .scores__maincontrolbtn {
-    width: 65vw;
+    margin: 0 0.5em;
+    width: 77%;
   }
   .scores__controlbtn {
-    width: 10vw;
+    width: 30px;
   }
   .scores__days {
-    top: 5.5%;
-    right: 5%;
-    width: 90%;
+    top: 6%;
+    right: 6%;
+    width: 88%;
   }
   .scores__daylist-day {
     font-size: 1.5rem;
@@ -2500,14 +2682,17 @@ body,
   .scores__star {
     font-size: 1.8rem;
   }
-  .scores__previewbtn, .scores__audiobtn, .scores__channelsbtn, .scores__standingsbtn {
+  .scores__previewbtn, .scores__audiobtn, .scores__channelsbtn {
     display: none;
+  }
+  .scores__standingsbtn {
+    margin-left: auto;
   }
   .scores__teamname {
     padding: 0.1em 0.2em;
   }
   .scores__showbtn {
-    margin-left: auto;
+    margin: 0 0.5em 0 1em;
     font-size: 1.5rem;
   }
   .extracontent {
@@ -2542,7 +2727,7 @@ body,
   }
   .footer-container {
     margin-bottom: 6em;
-    width: 100vw;
+    width: 100%;
   }
   .footer {
     display: flex;
@@ -2581,9 +2766,9 @@ body,
     bottom: 0;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1048px) {
   .navtop__settings {
-    right: 0;
+    right: 2%;
   }
 }
 @media (min-width: 799px) and (max-width: 1047px) {
@@ -2608,34 +2793,43 @@ body,
   .navtop__pref {
     top: 8%;
   }
+  .container-box {
+    border-bottom: 1px solid #999;
+  }
   .navcategories {
-    width: 100vw;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    height: 60px;
+    width: 100%;
+    border: none;
   }
   .navcategories__element {
     position: relative;
-    margin: 0;
-    padding: 1em 0.5em 0 0.5em;
+    margin: 0 0.5em;
+    padding: 0;
+  }
+  .navcategories__element:nth-of-type(2) {
+    margin-left: 2em;
   }
   .navcategories__element:nth-of-type(6), .navcategories__element:nth-of-type(7), .navcategories__element:nth-of-type(8) {
     display: none;
   }
-  .navcategories__element--icon {
-    font-size: 1.5rem;
-  }
   .navcategories__morebtn {
     margin-left: auto;
-    margin-right: 1em;
   }
   .mainbox {
+    margin-top: 0.3em;
     padding: 1em;
     width: 100vw;
   }
   .regionbar {
-    padding: 0 2em;
+    padding: 0 1em 0 1em;
+  }
+  .regionbar__btn {
+    padding: 0.5em 0;
   }
   .scores {
-    width: 590px;
-    width: 77%;
+    width: 75.5%;
   }
   .scores__navbtn {
     font-size: 1.2rem;
@@ -2710,7 +2904,7 @@ body,
     display: none;
   }
 }
-@media (min-width: 850px) and (max-width: 1047px) {
+@media (min-width: 820px) and (max-width: 1047px) {
   .navcategories__element:nth-of-type(6) {
     display: flex;
   }
@@ -2720,7 +2914,7 @@ body,
     margin-left: 21%;
   }
 }
-@media (min-width: 960px) and (max-width: 1047px) {
+@media (min-width: 950px) and (max-width: 1047px) {
   .navcategories__element:nth-of-type(7) {
     display: flex;
   }

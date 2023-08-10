@@ -10,8 +10,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./main.css">
         <script src="https://kit.fontawesome.com/751d31e174.js" crossorigin="anonymous"></script>
 </head>
@@ -23,7 +23,9 @@
                 <div class="container container-top">
                         <div class="navtop__left">
                                 <a href="#" class="navtop__logo navtop__element"><img src="./logo.jpg" alt="logo"
-                                                class="navtop__logo-img"> flashscore</a>
+                                                class="navtop__logo-img">
+                                        <p class="navtop__logo-text">flashscore</p>
+                                </a>
                                 <a href="#" class="navtop__element navtop__element-active"><i
                                                 class="fa-solid fa-table navtop__icon"></i> scores</a>
                                 <a href="#" class="navtop__element"><i class="fa-solid fa-newspaper navtop__icon"></i>
@@ -232,14 +234,17 @@
                                         class="fa-brands fa-google navtop__login-btnicon navtop__login-googleicon"></i>
                                 <p class="navtop__login-btntext navtop__login-btnwhitetext">Continue with Google</p>
                         </button>
-                        <button class="navtop__login-btn standardloginbutton login-hover"><i class="fa-brands fa-facebook navtop__login-btnicon"></i>
+                        <button class="navtop__login-btn standardloginbutton login-hover"><i
+                                        class="fa-brands fa-facebook navtop__login-btnicon"></i>
                                 <p? class="navtop__login-btntext">Continue with Facebook</p>
 
                         </button>
-                        <button class="navtop__login-btn standardloginbutton login-hover"><i class="fa-brands fa-apple navtop__login-btnicon"></i>
+                        <button class="navtop__login-btn standardloginbutton login-hover"><i
+                                        class="fa-brands fa-apple navtop__login-btnicon" id="loginapple"></i>
                                 <p class="navtop__login-btntext">Continue with Apple</p>
                         </button>
-                        <button class="navtop__login-btn standardloginbutton login-hover"><i class="fa-solid fa-envelope navtop__login-btnicon"></i>
+                        <button class="navtop__login-btn standardloginbutton login-hover"><i
+                                        class="fa-solid fa-envelope navtop__login-btnicon"></i>
                                 <p class="navtop__login-btntext">Continue with email</p>
                         </button>
                         <p class="navtop__login-smalltext">By clicking on any "Continue with" button, you agree to <a
@@ -461,7 +466,8 @@
                                                 <div class="navtop__pref-btnbox2"><button
                                                                 class="navtop__pref-btnbox-btn navtop__pref-vendorsbox-filterslist-filter-btn navtop__pref-vendorsbox-btnmobile">Apply
                                                         </button>
-                                                        <button class="navtop__pref-btnbox-btn  navtop__pref-vendorsbox-btnmobile">Cancel</button>
+                                                        <button
+                                                                class="navtop__pref-btnbox-btn  navtop__pref-vendorsbox-btnmobile">Cancel</button>
                                                 </div>
                                         </div>
                                 </div>
@@ -489,7 +495,8 @@
                                                         <a href="" class="navtop__pref-vendorsbox-element-bottom"></a>
                                                 </div>
                                                 <div class="navtop__pref-vendorsbox-element-right">
-                                                        <div class="navtop__pref-vendorsbox-element-checkbox" id="minusbtn"><i
+                                                        <div class="navtop__pref-vendorsbox-element-checkbox"
+                                                                id="minusbtn"><i
                                                                         class="fa-solid fa-minus navtop__pref-element-checkicon
                                                                         fa-solid fa-minus navtop__pref-element-checkiconminus"></i>
                                                         </div>
@@ -1823,31 +1830,44 @@
         <div class="container-box">
                 <div class="container">
                         <nav class="navcategories">
-                                <a class="navcategories__element"><i
+                                <a class="navcategories__element navcategories__firstelement"><i
                                                 class="fa-solid fa-star regionbar__star navcategories__element--icon"></i>
-                                        <p class="navcategories__element-text navcategories__element-text-favorites">favorites</p>  <button class="navcategories__element-zero">0</button></a>
+                                        <p class="navcategories__element-text navcategories__element-text-favorites">
+                                                favorites</p> <button class="navcategories__element-zero">0</button>
+                                </a>
                                 <a class="navcategories__element nav__active"><i
                                                 class="fa-solid fa-futbol navcategories__element--icon"></i>
-                                        <p class="navcategories__element-text">football</p>  </a>
+                                        <p class="navcategories__element-text">football</p>
+                                </a>
                                 <a class="navcategories__element"><i
                                                 class="fa-solid fa-table-tennis-paddle-ball navcategories__element--icon"></i>
-                                        <p class="navcategories__element-text">tennis</p>  </a>
+                                        <p class="navcategories__element-text">tennis</p>
+                                </a>
                                 <a class="navcategories__element"><i
                                                 class="fa-solid fa-basketball navcategories__element--icon"></i>
-                                        <p class="navcategories__element-text">basketball</p>  </a>
+                                        <p class="navcategories__element-text">basketball</p>
+                                </a>
                                 <a class="navcategories__element"><i
                                                 class="fa-solid fa-hockey-puck navcategories__element--icon"></i>
-                                        <p class="navcategories__element-text">hockey</p>  </a>
+                                        <p class="navcategories__element-text">hockey</p>
+                                </a>
                                 <a class="navcategories__element"><i
                                                 class="fa-solid fa-golf-ball-tee navcategories__element--icon"></i>
-                                        <p class="navcategories__element-text">golf</p>  </a>
+                                        <p class="navcategories__element-text">golf</p>
+                                </a>
                                 <a class="navcategories__element"><i
-                                                class="fa-solid fa-volleyball navcategories__element--icon"></i><p class="navcategories__element-text">volleyball</p>  </a>
+                                                class="fa-solid fa-volleyball navcategories__element--icon"></i>
+                                        <p class="navcategories__element-text">volleyball</p>
+                                </a>
                                 <a class="navcategories__element"><i
                                                 class="fa-solid fa-baseball-bat-ball navcategories__element--icon"></i>
-                                        <p class="navcategories__element-text">baseball</p>  </a>
-                                <p class="navcategories__element navcategories__morebtn">more <i
-                                                class="fa-solid fa-arrow-down navcategories__element--icon"> </i></p>
+                                        <p class="navcategories__element-text">baseball</p>
+                                </a>
+
+                                <a class="navcategories__element navcategories__morebtn">
+                                        <p class="navcategories__element-text">more</p> <i
+                                        class="fa-solid fa-arrow-down navcategories__element--icon"></i>
+                                </a>
                                 <div class="navcategories__menu hide">
                                         <a href="" class="navcategories__menu-element lightblackhover">
                                                 <i class="navcategories__menu-icon fa-solid fa-helmet-un"></i>
@@ -2474,21 +2494,35 @@
                                         </div>
                                         <div class="scores__days hide">
                                                 <ul class="scores__daylist">
-                                                        <li class="scores__daylist-day darkgreyhover" id="day1">05 TH</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day2">05 FR</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day3">05 SA</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day4">05 SU</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day5">05 MO</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day6">05 TU</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day7">05 WE</li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day1">05 TH
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day2">05 FR
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day3">05 SA
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day4">05 SU
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day5">05 MO
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day6">05 TU
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day7">05 WE
+                                                        </li>
                                                         <li class="scores__daylist-day darkgreyhover active">TODAY</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day8">05 FR</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day9">05 SA</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day10">05 SU</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day11">05 MO</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day12">05 TU</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day13">05 WE</li>
-                                                        <li class="scores__daylist-day darkgreyhover" id="day14">05 TH</li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day8">05 FR
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day9">05 SA
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day10">05 SU
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day11">05 MO
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day12">05 TU
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day13">05 WE
+                                                        </li>
+                                                        <li class="scores__daylist-day darkgreyhover" id="day14">05 TH
+                                                        </li>
                                                 </ul>
                                         </div>
 
@@ -2501,8 +2535,12 @@
                                                                 src="https://m.media-amazon.com/images/I/41G0-4KDjbL.jpg"
                                                                 alt="country"
                                                                 class="regionbar__li-flag scores__leaguelivetop-flag">
-                                                        <p class="scores__heading-leaguename">ENGLAND: <span class="scores__heading-leaguename-span">Premier League</span></p></h4>
+                                                        <p class="scores__heading-leaguename">ENGLAND: <span
+                                                                        class="scores__heading-leaguename-span">Premier
+                                                                        League</span></p>
+                                                </h4>
                                                 <a href="" class="scores__standingsbtn textwhite">Standings</a>
+
                                                 <button class="scores__showbtn"><i
                                                                 class="fa-solid fa-arrow-up"></i></button>
                                         </div>
@@ -2530,8 +2568,8 @@
                                                         <button class="scores__leaguelivebottom-previewpopup hide">Click
                                                                 to see
                                                                 match preview!</button>
-                                                        <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                        target="_blank"
+                                                        <button class="scores__previewbtn previewbtnhover"><a
+                                                                        href="./match.html" target="_blank"
                                                                         class="scores__previewbtn-link">preview</a></button>
                                                         <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                                 commentary is
@@ -2637,8 +2675,8 @@
                                                         <button class="scores__leaguelivebottom-previewpopup hide">Click
                                                                 to see
                                                                 match preview!</button>
-                                                        <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                        target="_blank"
+                                                        <button class="scores__previewbtn previewbtnhover"><a
+                                                                        href="./match.html" target="_blank"
                                                                         class="scores__previewbtn-link">preview</a></button>
                                                         <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                                 commentary is
@@ -2744,8 +2782,8 @@
                                                         <button class="scores__leaguelivebottom-previewpopup hide">Click
                                                                 to see
                                                                 match preview!</button>
-                                                        <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                        target="_blank"
+                                                        <button class="scores__previewbtn previewbtnhover"><a
+                                                                        href="./match.html" target="_blank"
                                                                         class="scores__previewbtn-link">preview</a></button>
                                                         <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                                 commentary is
@@ -2851,8 +2889,8 @@
                                                         <button class="scores__leaguelivebottom-previewpopup hide">Click
                                                                 to see
                                                                 match preview!</button>
-                                                        <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                        target="_blank"
+                                                        <button class="scores__previewbtn previewbtnhover"><a
+                                                                        href="./match.html" target="_blank"
                                                                         class="scores__previewbtn-link">preview</a></button>
                                                         <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                                 commentary is
@@ -2972,8 +3010,8 @@
                                                         <button class="scores__leaguelivebottom-previewpopup hide">Click
                                                                 to see
                                                                 match preview!</button>
-                                                        <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                        target="_blank"
+                                                        <button class="scores__previewbtn previewbtnhover"><a
+                                                                        href="./match.html" target="_blank"
                                                                         class="scores__previewbtn-link">preview</a></button>
                                                         <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                                 commentary is
@@ -3070,8 +3108,8 @@
                                                                 to see
                                                                 match
                                                                 preview!</button>
-                                                        <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                        target="_blank"
+                                                        <button class="scores__previewbtn previewbtnhover"><a
+                                                                        href="./match.html" target="_blank"
                                                                         class="scores__previewbtn-link">preview</a></button>
                                                         <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                                 commentary is
@@ -3168,8 +3206,8 @@
                                                         <button class="scores__leaguelivebottom-previewpopup hide">Click
                                                                 to see
                                                                 match preview!</button>
-                                                        <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                        target="_blank"
+                                                        <button class="scores__previewbtn previewbtnhover"><a
+                                                                        href="./match.html" target="_blank"
                                                                         class="scores__previewbtn-link">preview</a></button>
                                                         <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                                 commentary is
@@ -3277,8 +3315,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -3376,8 +3414,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -3426,8 +3464,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -3527,8 +3565,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -3628,8 +3666,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -3725,8 +3763,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -3822,8 +3860,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -3919,8 +3957,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -4016,8 +4054,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -4113,8 +4151,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -4210,8 +4248,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -4307,8 +4345,8 @@
                                                 </div>
                                                 <button class="scores__leaguelivebottom-previewpopup hide">Click to see
                                                         match preview!</button>
-                                                <button class="scores__previewbtn previewbtnhover"><a href="./match.html"
-                                                                target="_blank"
+                                                <button class="scores__previewbtn previewbtnhover"><a
+                                                                href="./match.html" target="_blank"
                                                                 class="scores__previewbtn-link">preview</a></button>
                                                 <button class="scores__leaguelivebottom-audiopopup hide">Audio
                                                         commentary is
@@ -4446,8 +4484,9 @@
                                 </p>
                         </div>
 
-                        
+
                         <div class="footer-container">
+                                <div class="white-background"></div>
                                 <div class="sitemap">
                                         <div class="sitemap__flashscorebox">
                                                 <h3 class="sitemap__heading">football</h3>
@@ -4578,39 +4617,42 @@
                                                 <p class="sitemap__mobile--text">Our mobile app is optimized for
                                                         your phone. Download it for
                                                         free!</p>
-                                               <div class="sitemap__mobile-btnbox">
+                                                <div class="sitemap__mobile-btnbox">
 
-                                                <button class="sitemap__btn">
-                                                        <i class="fa-brands fa-apple sitemap__btn--icon"></i>
-                                                        <a href="https://apps.apple.com/app/id766443283?mt=8"
-                                                                target="_blank" class="sitemap__btn--text">Download on
-                                                                the
-                                                                <span class="sitemap__btn--span sitemap__btn--spanone">App
-                                                                        Store</span>
-                                                        </a>
-                                                </button>
+                                                        <button class="sitemap__btn">
+                                                                <i class="fa-brands fa-apple sitemap__btn--icon"
+                                                                        id="sitemapapple"></i>
+                                                                <a href="https://apps.apple.com/app/id766443283?mt=8"
+                                                                        target="_blank"
+                                                                        class="sitemap__btn--text">Download on
+                                                                        the
+                                                                        <span
+                                                                                class="sitemap__btn--span sitemap__btn--spanone">App
+                                                                                Store</span>
+                                                                </a>
+                                                        </button>
 
-                                                <button class="sitemap__btn">
-                                                        <i
-                                                                class="fa-brands fa-google-play sitemap__btn--icon sitemap__btn--icontwo"></i>
+                                                        <button class="sitemap__btn">
+                                                                <i
+                                                                        class="fa-brands fa-google-play sitemap__btn--icon sitemap__btn--icontwo"></i>
 
-                                                        <a href="https://play.google.com/store/apps/details?id=eu.livesport.FlashScore_com"
-                                                                target="_blank" class="sitemap__btn--text">
-                                                                GET IT ON<span class="sitemap__btn--span">Google
-                                                                        Play</span>
-                                                        </a>
-                                                </button>
+                                                                <a href="https://play.google.com/store/apps/details?id=eu.livesport.FlashScore_com"
+                                                                        target="_blank" class="sitemap__btn--text">
+                                                                        GET IT ON<span class="sitemap__btn--span">Google
+                                                                                Play</span>
+                                                                </a>
+                                                        </button>
 
-                                                <button class="sitemap__btn">
-                                                        <i
-                                                                class="fa-brands fa-squarespace sitemap__btn--icon sitemap__btn--iconthree"></i>
-                                                        <a href="https://appgallery.huawei.com/app/C101497479?sharePrepath=ag"
-                                                                target="_blank" class="sitemap__btn--text">
-                                                                EXPLORE IT ON<span
-                                                                        class="sitemap__btn--span">AppGallery</span>
-                                                        </a>
-                                                </button>
-                                               </div>
+                                                        <button class="sitemap__btn">
+                                                                <i
+                                                                        class="fa-brands fa-squarespace sitemap__btn--icon sitemap__btn--iconthree"></i>
+                                                                <a href="https://appgallery.huawei.com/app/C101497479?sharePrepath=ag"
+                                                                        target="_blank" class="sitemap__btn--text">
+                                                                        EXPLORE IT ON<span
+                                                                                class="sitemap__btn--span">AppGallery</span>
+                                                                </a>
+                                                        </button>
+                                                </div>
                                         </div>
                                 </div>
 

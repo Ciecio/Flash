@@ -1,20 +1,22 @@
 @media (min-width: 638px) and (max-width: 799px) {
+	
 	.container-top {
-		padding: 0 0.5em;
 		justify-content: space-between;
+		padding: 0 0.5em;
+		height: 80px;
 	}
 
 	.container-box {
 		height: 80px;
+		width: 100%;
 	}
 
-	.container-box .container {
-		margin-top: 2em;
+	.container-box {
+		height: 60px;
 	}
 
 	.container {
-		// height: 80px;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.aside-div {
@@ -26,31 +28,40 @@
 	}
 
 	.mainbox {
-		width: 100vw;
+		margin-top: 0;
+		padding: 0 1.2em;
 		justify-content: space-between;
+		width: 100%;
 	}
 
 	.navtop {
 		padding: 0 1em;
-		width: 100vw;
+		width: 100%;
+
+		&__right{
+			z-index: 9;
+		}
 
 		&__element {
 			padding: 0 0.5em;
 			margin: 0 1em;
 			height: 62px;
+			z-index: 10;
+		}
+
+		&__logo{
+			margin: 0;
+			padding: 0;
+			font-size: 2rem;
+
+			&-img{
+				width: 40px;
+			}
 		}
 
 		&__toolicon {
 			&-logintext {
 				display: none;
-			}
-		}
-
-		&__logo {
-			font-size: 1.5rem;
-			padding-left: 0;
-			&-img {
-				width: 35px;
 			}
 		}
 
@@ -88,8 +99,9 @@
 		}
 
 		&__settings {
-			left: -10px;
-			width: 100vw;
+			top: 70px;
+			margin-right: 2em;
+			width: 320px;
 		}
 
 		&__search {
@@ -233,14 +245,18 @@
 	}
 
 	.navcategories {
-		padding: 1em;
-		// width: 100vw;
+		padding: 0;
+		margin: 0;
+		height: 60px;
+		width: 100%;
 
 		&__element {
 			position: relative;
+			align-items: center;
+			justify-content: center;
+			margin: 0 .5em;
+			height: 60px;
 			font-size: 1.3rem;
-			margin: 0 0.5em;
-			padding: 1em 0.5em 0 .5em;
 
 			&:nth-of-type(5),
 			&:nth-of-type(6),
@@ -249,20 +265,24 @@
 				display: none;
 			}
 
+			&:last-of-type{
+				margin: 0 1em 0 auto;
+			}
+
 			&--icon {
 				margin-bottom: 0.5em;
 				font-size: 1.8rem;
 			}
 		}
 
-		&__morebtn {
-			flex-direction: row;
-			align-items: center;
-			margin-left: auto;
+		&__firstelement{
+			margin-right: 3em;
+			margin-left: 0;
 		}
 
 		&__menu {
-			width: 100vw;
+			right: -1%;
+			width: 100%;
 			height: auto;
 
 			&-number {
@@ -272,13 +292,12 @@
 	}
 
 	.scores {
-		width: 65vw;
+		width: 67vw;
 
 		&__nav {
-			padding-right: 1.5em;
-			// padding: 0;
-			width: 65vw;
 			flex-wrap: wrap;
+			padding: 1em 0;
+			width: 100%;
 			overflow: hidden;
 		}
 
@@ -287,27 +306,29 @@
 		}
 
 		&__selectbtnbox {
-			margin: 1em 0.5em;
 			display: flex;
-			justify-self: center;
 			align-content: center;
 			justify-content: center;
-			padding-right: 0;
-			width: 65vw;
+			justify-content: space-evenly;
+			margin: 1em 0 0;
+			padding: 1em;
+			width: 100%;
+			border-bottom: 1px solid #fff;
 		}
 
 		&__maincontrolbtn {
-			width: 65vw;
+			margin: 0 0.5em;
+			width: 77%;
 		}
 
 		&__controlbtn {
-			width: 10vw;
+			width: 30px;
 		}
 
 		&__days {
-			top: 5.5%;
-			right: 5%;
-			width: 90%;
+			top: 6%;
+			right:6%;
+			width: 88%;
 		}
 
 		&__daylist {
@@ -348,9 +369,12 @@
 
 		&__previewbtn,
 		&__audiobtn,
-		&__channelsbtn,
-		&__standingsbtn {
+		&__channelsbtn{
 			display: none;
+		}
+
+		&__standingsbtn{
+			margin-left: auto;
 		}
 
 		&__teamname {
@@ -362,7 +386,7 @@
 		// }
 
 		&__showbtn {
-			margin-left: auto;
+			margin:0 .5em 0 1em;
 			font-size: 1.5rem;
 			// width: 50%;
 		}
@@ -410,7 +434,7 @@
 
 	.footer-container {
 		margin-bottom: 6em;
-		width: 100vw;
+		width: 100%;
 	}
 
 	.footer {
@@ -458,55 +482,3 @@
 		bottom: 0;
 	}
 }
-
-// @media (min-width: 380px) {
-// 	.navcategories {
-// 		&__element {
-// 			&:nth-of-type(4) {
-// 				display: flex;
-// 			}
-// 		}
-// 	}
-// }
-
-// @media (min-width: 420px) {
-// 	.navcategories {
-// 		&__element {
-// 			&:nth-of-type(5) {
-// 				display: flex;
-// 			}
-// 		}
-// 	}
-
-// 	.scores {
-// 		&__nav {
-// 			overflow: hidden;
-// 		}
-
-// 		&__navbtn {
-// 			&:nth-of-type(5) {
-// 				display: block;
-// 			}
-// 		}
-// 	}
-// }
-
-// @media (min-width: 460px) {
-// 	.navcategories {
-// 		&__element {
-// 			&:nth-of-type(6) {
-// 				display: flex;
-// 			}
-// 		}
-// 	}
-// }
-
-// @media (min-width: 500px) {
-// 	.navcategories {
-// 		&__element {
-// 			&:nth-of-type(7) {
-// 				display: flex;
-// 			}
-// 		}
-// 	}
-// }

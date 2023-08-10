@@ -30,9 +30,16 @@ button {
 	align-items: center;
 }
 
+.containerbox .container {
+	height: 60px;
+}
+
 .container {
-	// width: 1048px;
 	max-width: 1048px;
+}
+
+.container-box {
+	border-bottom: 1px solid #999;
 }
 
 .fa-star {
@@ -51,7 +58,7 @@ button {
 	height: 40px;
 	background-color: #0f2d37;
 	border: none;
-	border-radius: 5px;
+	border-radius: 8px;
 }
 
 .modalwindow {
@@ -66,6 +73,7 @@ button {
 // NAV
 .nav {
 	&__active {
+		color: #ff0046;
 		border-bottom: 3px solid #ff0046;
 	}
 }
@@ -98,7 +106,7 @@ button {
 		display: flex;
 		align-items: center;
 		padding: 1em 1.5em;
-		height: 84px;
+		height: 88px;
 		background-color: #001e28;
 		color: #ddd;
 		font-size: 1.3rem;
@@ -138,7 +146,7 @@ button {
 			color: #fff;
 			font-size: 0.8rem;
 			text-transform: uppercase;
-			border-radius: 5px;
+			border-radius: 8px;
 		}
 	}
 
@@ -148,7 +156,7 @@ button {
 		background-color: #0f2d37;
 		color: rgb(200, 205, 205);
 		border: none;
-		border-radius: 5px;
+		border-radius: 8px;
 		transition: background-color 0.3s;
 
 		&:hover {
@@ -171,12 +179,12 @@ button {
 		padding: 0.2em;
 		font-size: 1.5rem;
 		border: 1px solid rgb(200, 205, 205);
-		border-radius: 5px;
+		border-radius: 8px;
 	}
 
 	&__settings {
 		position: absolute;
-		top: 90px;
+		top: 80px;
 		right: 0;
 		display: flex;
 		flex-direction: column;
@@ -197,7 +205,7 @@ button {
 		background-color: #010a0f;
 		color: #eee;
 		border: none;
-		border-radius: 5px;
+		border-radius: 8px;
 		z-index: 100;
 
 		&-icon {
@@ -242,7 +250,7 @@ button {
 	&__pref,
 	&__settingspanel {
 		position: absolute;
-		top: 100px;
+		top: 92px;
 		display: flex;
 		flex-direction: column;
 		width: 538px;
@@ -251,16 +259,15 @@ button {
 	}
 
 	&__search {
-		padding: 2em 3em;
+		padding: 1.5em 0;
 		min-height: 320px;
 		background-color: rgb(1, 10, 15);
 		height: 80vh;
-		overflow: scroll;
-		overflow-x: hidden;
 
 		&-top {
 			display: flex;
 			justify-content: space-between;
+			padding: 0 1em 0 2em;
 			border-bottom: 1px solid #0f2d37;
 		}
 
@@ -276,12 +283,19 @@ button {
 			cursor: pointer;
 		}
 
+		&-list {
+			padding: 0 2.4em;
+			overflow-y: scroll;
+		}
+
 		&-inputbox {
 			display: flex;
 			align-items: center;
+			align-self: center;
 			justify-content: space-between;
-			padding: 0.5em;
+			padding: 0.3em;
 			margin: 2em 0;
+			width: 92%;
 			border: 2px solid #c8cdcd;
 			border-radius: 1em;
 
@@ -301,11 +315,11 @@ button {
 
 			&-btn {
 				padding: 0.5em 1.2em;
-				width: 40%;
+				width: 33.5%;
+				color: #ddd;
 				font-size: 1rem;
 				font-weight: bold;
 				text-transform: uppercase;
-				color: #ddd;
 			}
 
 			&-dropdown {
@@ -316,20 +330,20 @@ button {
 
 		&-sportslist {
 			position: absolute;
-			top: 22%;
-			right: 2%;
+			top: 19.5%;
+			right: 4%;
 			padding: 0.5em;
 			width: 30%;
 			height: 75%;
 			background-color: #010a0f;
-			border: none;
+			border: 1px solid #ddd;
 			overflow: auto;
 			z-index: 2000;
 
 			&-element {
-				padding: 0.25em 0.5em;
+				padding: 0.5em;
 				font-size: 1.3rem;
-				border-radius: 5px;
+				border-radius: 8px;
 				cursor: pointer;
 
 				&-active {
@@ -339,11 +353,13 @@ button {
 		}
 
 		&-text {
+			padding: 0 2em;
 			margin-bottom: 1em;
 			font-size: 1.3rem;
 		}
 
 		&-mostpopular {
+			padding: 0 2em;
 			font-size: 1.2rem;
 			text-transform: uppercase;
 		}
@@ -358,7 +374,7 @@ button {
 			align-items: center;
 			padding: 0.5em;
 			margin: 1em 0;
-			border-radius: 5px;
+			border-radius: 8px;
 			cursor: pointer;
 
 			&:hover {
@@ -370,7 +386,7 @@ button {
 			margin-right: 1.5em;
 			width: 30px;
 			height: 30px;
-			border-radius: 5px;
+			border-radius: 8px;
 		}
 
 		&-texttop {
@@ -413,14 +429,15 @@ button {
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
-			padding: 1.4em;
-			width: 60%;
+			margin-bottom: 0.5em;
+			padding: 1em 1em 0.5em;
+			width: 59.5%;
 			background-color: #001e28;
-			border-radius: 5px;
+			border-radius: 8px;
 		}
 
 		&-text {
-			padding: 0.5em 1em;
+			padding: 0.5em 1em 0;
 			font-size: 1.3rem;
 		}
 
@@ -436,7 +453,7 @@ button {
 			justify-content: center;
 			align-items: center;
 			text-align: center;
-			padding: 0.5em 1em;
+			padding: 0em 1em 0.5em;
 			font-size: 1.2rem;
 		}
 
@@ -501,12 +518,15 @@ button {
 	}
 
 	&__settingspanel {
-		padding: 1em 2.4em;
+		padding: 0 2.4em 1em;
+		height: 78vh;
 		background-color: rgb(1, 10, 15);
+		overflow-y: scroll;
 
 		&-top {
 			display: flex;
 			align-items: center;
+			padding: 0.85em 0;
 			border-bottom: 1px solid #0f2d37;
 		}
 
@@ -523,13 +543,13 @@ button {
 		}
 
 		&-header {
-			margin-bottom: 0.5em;
+			margin-bottom: 1em;
 			font-size: 1.6rem;
 			font-weight: bold;
 		}
 
 		&-panel {
-			padding: 2.5em 0;
+			padding: 2.7em 0;
 			border-bottom: 1px solid #0f2d37;
 
 			&:last-child {
@@ -589,15 +609,14 @@ button {
 
 	&__pref {
 		position: fixed;
-		top: 10%;
-		padding: 1.2em;
+		top: 15%;
 		width: 730px;
 		background-color: #02171f;
 
 		&-headerbox {
 			display: flex;
 			align-items: center;
-			padding:  1.2em 1.2em;
+			padding: 1.2em 1.2em;
 			border-bottom: 1px solid #0f2d37;
 
 			&-logo {
@@ -615,7 +634,6 @@ button {
 			display: flex;
 			// flex-direction: column;
 			// flex-wrap: nowrap;
-			margin-top: 1em;
 			border-bottom: 1px solid #0f2d37;
 
 			&-list {
@@ -623,26 +641,36 @@ button {
 				height: 425px;
 				overflow-y: scroll;
 
-				
-			&::-webkit-scrollbar {
-				width: 1.2em;
-				background-color: transparent;
-				border: none;
-			}
+				&::-webkit-scrollbar {
+					width: 1.2em;
+					background-color: transparent;
+					border: none;
+				}
 
-			&::-webkit-scrollbar-thumb{
-				background-color: rgb(201, 197, 197);
-				border-radius: 8px;
-			}
+				&::-webkit-scrollbar-thumb {
+					background-color: rgb(201, 197, 197);
+					border-radius: 8px;
+				}
 			}
 
 			&-listelement {
-				padding: 1.2em;
+				position: relative;
+				padding: 1.2em 1.2em 1.2em 2em;
 				background-color: #0f2d37;
 				font-size: 1.2rem;
 				font-weight: bold;
-				border-bottom: 1px solid #ddd;
+				border-bottom: 1px solid rgb(0, 20, 30);
 				cursor: pointer;
+
+				&:before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 10px;
+					background-color: rgb(0, 20, 30);
+					content: '';
+				}
 
 				// &-active {
 				// 	background-color: #010a0f;
@@ -689,7 +717,7 @@ button {
 				height: 425px;
 				// overflow-y: scroll;
 
-				&:nth-of-type(7){
+				&:nth-of-type(7) {
 					overflow-y: scroll;
 
 					&::-webkit-scrollbar {
@@ -697,8 +725,8 @@ button {
 						background-color: transparent;
 						border: none;
 					}
-		
-					&::-webkit-scrollbar-thumb{
+
+					&::-webkit-scrollbar-thumb {
 						background-color: darkgrey;
 						border-radius: 8px;
 					}
@@ -727,7 +755,7 @@ button {
 					height: 1em;
 					width: 3em;
 					background-color: #ddd;
-					border-radius: 5px;
+					border-radius: 8px;
 
 					&:before {
 						position: absolute;
@@ -804,7 +832,7 @@ button {
 				border: none;
 			}
 
-			&::-webkit-scrollbar-thumb{
+			&::-webkit-scrollbar-thumb {
 				background-color: darkgrey;
 				border-radius: 8px;
 			}
@@ -861,7 +889,7 @@ button {
 			&-input {
 				width: 80%;
 				background: transparent;
-				color:#ddd;
+				color: #ddd;
 				border: none;
 				outline: none;
 				font-style: italic;
@@ -886,13 +914,13 @@ button {
 				border: 1px solid #0f2d37;
 				cursor: pointer;
 
-				&:hover{
+				&:hover {
 					outline: 1px solid #ddd;
 				}
 
 				&:first-of-type {
 					border: none;
-					&:hover{
+					&:hover {
 						outline: none;
 					}
 				}
@@ -924,43 +952,50 @@ button {
 
 				&-showbtn {
 					margin-left: 1em;
-					padding: .5em 1em;
+					padding: 0.5em 1em;
 				}
 
 				&-checkbox {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					padding: .5em;
+					padding: 0.5em;
 					max-width: 25px;
 					background-color: #3860be;
-					border-radius: 5px;
+					border-radius: 8px;
 				}
 
-				&-privacylist{
+				&-privacylist {
 					margin-top: 1em;
 					padding: 1em 2em;
 					width: 100%;
 					background-color: #0f2d37;
 					border: 1px solid #ddd;
 
-					&-span{
+					&-span {
 						font-weight: bold;
 						color: #999;
 					}
 
-					&-text{
+					&-text {
 						color: #ddd;
 						line-height: 1.85;
 
-						&:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(10),&:nth-of-type(11),&:nth-of-type(13),&:nth-of-type(14),&:nth-of-type(15),&:nth-of-type(16){
+						&:nth-of-type(2),
+						&:nth-of-type(3),
+						&:nth-of-type(10),
+						&:nth-of-type(11),
+						&:nth-of-type(13),
+						&:nth-of-type(14),
+						&:nth-of-type(15),
+						&:nth-of-type(16) {
 							border-bottom: 1px solid #999;
 						}
 					}
 				}
 			}
 
-			&-anchor{
+			&-anchor {
 				position: absolute;
 				top: 12%;
 				right: 7%;
@@ -972,7 +1007,7 @@ button {
 				z-index: 10;
 			}
 
-			&-filterslist{
+			&-filterslist {
 				position: absolute;
 				top: 15%;
 				right: 2%;
@@ -989,34 +1024,34 @@ button {
 					border: none;
 				}
 
-				&::-webkit-scrollbar-thumb{
+				&::-webkit-scrollbar-thumb {
 					background-color: darkgrey;
 					border-radius: 8px;
 				}
 
-				&-top{
+				&-top {
 					margin: 2em 1em 1em auto;
 					color: rgb(97, 95, 95);
 					cursor: pointer;
 					z-index: 20;
 				}
 
-				&-box{
+				&-box {
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 				}
 
-				&-filter{
+				&-filter {
 					display: flex;
 					align-items: center;
-					padding: 0.5em 0 .5em 1em;
+					padding: 0.5em 0 0.5em 1em;
 
-					&-text{
-						margin-left: .5em;
+					&-text {
+						margin-left: 0.5em;
 					}
 
-					&-btn{
+					&-btn {
 						margin-left: 1em;
 					}
 				}
@@ -1027,7 +1062,7 @@ button {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			padding: 2em 0;
+			padding: 2em;
 
 			&-btn {
 				padding: 1em 2em;
@@ -1065,32 +1100,24 @@ button {
 .navcategories {
 	position: relative;
 	display: flex;
-	justify-content: space-between;
+	// justify-content: space-between;
 	align-items: center;
-	margin-bottom: 2em;
 	width: 100%;
-	height: 50px;
-	border-bottom: 1px solid #0f2d37;
+	height: 60px;
 
 	&__element {
-		// display: flex;
-		// align-items: center;
-		// align-content: center;
 		position: relative;
 		display: grid;
+		align-items: center;
 		grid-template-columns: (1fr, 2fr, 5fr, 1fr);
-		grid-template-rows: repeat(3,1fr);
-		padding: 0.5em 0em;
+		grid-template-rows: repeat(3, 1fr);
+		margin: 0 0.35em;
+		padding: 0;
 		color: rgb(200, 205, 205);
 		text-transform: uppercase;
 		text-decoration: none;
 		font-size: 1.3rem;
 		cursor: pointer;
-		
-
-		&:first-of-type{
-			margin-right: 1em;
-		}
 
 		&:hover {
 			color: #fff;
@@ -1101,7 +1128,7 @@ button {
 			top: -20%;
 			padding: 0.25em 0.5em;
 			margin-left: 0.5em;
-			border-radius: 5px;
+			border-radius: 8px;
 			background-color: #999;
 			font-size: 1rem;
 			grid-column: 4/5;
@@ -1113,21 +1140,29 @@ button {
 			z-index: -50;
 			grid-column: 1/2;
 			grid-row: 2/3;
+			font-size: 2rem;
 		}
 
-		&-text{
+		&-text {
 			grid-column: 2/5;
 			grid-row: 2/3;
+			pointer-events: none;
 
-			&-favorites{
+			&-favorites {
 				grid-column: 2/4;
 			}
 		}
 	}
 
+	&__firstelement {
+		margin-right: 3em;
+		margin-left: 0;
+	}
+
 	&__morebtn {
-		display: flex;
+		// display: flex;
 		align-items: center;
+		margin-left: auto;
 		cursor: pointer;
 	}
 
@@ -1138,10 +1173,9 @@ button {
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
-		// align-items: center;
 		padding: 1em;
 		background-color: #010a0f;
-		border-radius: 5px;
+		border-radius: 8px;
 		width: 620px;
 		height: 410px;
 		z-index: 100;
@@ -1154,7 +1188,7 @@ button {
 			// width: 30%;
 			color: #ddd;
 			text-decoration: none;
-			border-radius: 5px;
+			border-radius: 8px;
 		}
 
 		&-text {
@@ -1175,7 +1209,7 @@ button {
 			margin-left: 0.4em;
 			padding: 0.2em 0.5em;
 			width: 16px;
-			border-radius: 5px;
+			border-radius: 8px;
 			background-color: #3f4446;
 
 			&:hover {
@@ -1200,13 +1234,14 @@ main {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	margin-top: 2.4em;
 }
 
 .regionbar {
 	display: flex;
 	flex-direction: column;
-	padding: 0.7em;
-	width: 170px;
+	padding: 0.7em 0.7em 0.7em 0.2em;
+	width: 156px;
 
 	&__heading {
 		// display: flex;
@@ -1237,7 +1272,7 @@ main {
 		font-size: 1.3rem;
 		text-overflow: ellipsis;
 		overflow: hidden;
-		text-wrap:nowrap;
+		text-wrap: nowrap;
 	}
 
 	&__showmorebtn {
@@ -1252,8 +1287,9 @@ main {
 		position: relative;
 		display: flex;
 		align-items: center;
-		// padding: 0 0.5em;
+		padding-left: 1em;
 		margin: 0;
+		border-radius: 8px;
 
 		&-flag {
 			width: 18px;
@@ -1280,7 +1316,7 @@ main {
 		background-color: transparent;
 		color: #ff0046;
 		border: none;
-		border-radius: 5px;
+		border-radius: 8px;
 		text-align-last: left;
 		text-transform: uppercase;
 		font-weight: bold;
@@ -1303,24 +1339,27 @@ main {
 		display: flex;
 		align-items: center;
 		padding: 1em 0;
+		background-color: #001e28;
 	}
 
 	&__navbtn {
-		padding: 0.5em 1em;
-		margin: 0.5em;
+		padding: 0.6em 1em;
+		margin: 0.4em;
 		background-color: #001e28;
 		color: rgb(200, 205, 205);
-		border-radius: 5px;
+		border-radius: 8px;
 		border: none;
 		text-transform: uppercase;
 		font-weight: bold;
+		font-size: 1.2rem;
+		letter-spacing: 0.4px;
 
 		&:hover {
 			background-color: #555e61;
 		}
 	}
 
-	&__heading{
+	&__heading {
 		display: flex;
 		align-items: center;
 	}
@@ -1331,7 +1370,7 @@ main {
 		background-color: #010a0f;
 		color: rgb(200, 205, 205);
 		border: none;
-		border-radius: 5px;
+		border-radius: 8px;
 
 		&:hover {
 			background-color: rgba(175, 169, 169, 0.3);
@@ -1342,11 +1381,22 @@ main {
 		}
 	}
 
+	&__controlbtn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
 	&__maincontrolbtn {
 		padding: 0.5em;
 		font-weight: bold;
+
 		&-calendar {
 			margin-right: 0.5em;
+		}
+
+		&-text {
+			font-size: 1.2rem;
 		}
 	}
 
@@ -1354,12 +1404,12 @@ main {
 		position: absolute;
 		top: 3%;
 		right: 0.5em;
-		padding: 0.5em;
+		padding: 1.2em;
 		width: 165px;
 		background-color: #010a0f;
-		border-radius: 5px;
+		border-radius: 8px;
 		text-align: center;
-		box-shadow:rgba(0, 0, 0, 0.25) 0px 2px 10px 0px;
+		box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 10px 0px;
 		z-index: 100;
 	}
 
@@ -1368,12 +1418,15 @@ main {
 		flex-direction: column;
 		justify-content: center;
 
-
 		&-day {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			margin: 0.1em;
 			padding: 0.1em 0.5em;
+			height: 24px;
 			font-size: 1.2rem;
-			border-radius: 5px;
+			border-radius: 8px;
 			cursor: pointer;
 		}
 	}
@@ -1382,7 +1435,9 @@ main {
 		display: flex;
 		align-items: center;
 		margin-left: auto;
+		margin: 0 0.5em 0 auto;
 		height: 50%;
+		background-color: #001e28;
 	}
 
 	&__leaguelivetop,
@@ -1393,9 +1448,10 @@ main {
 	}
 
 	&__leaguelivetop {
+		padding: 0.17em 1em;
 		width: 100%;
 		background-color: #001e28;
-		border-radius: 5px;
+		border-radius: 8px;
 
 		&-flag {
 			margin-right: 0.5em;
@@ -1459,7 +1515,7 @@ main {
 			background-color: #555e61;
 			font-size: 1rem;
 			color: #ddd;
-			border-radius: 5px;
+			border-radius: 8px;
 			z-index: 100;
 		}
 
@@ -1486,7 +1542,7 @@ main {
 			background-image: url('./sts.jpg');
 			background-size: cover;
 			background-position: center;
-			border-radius: 5px;
+			border-radius: 8px;
 		}
 
 		&-channelpopup {
@@ -1525,7 +1581,7 @@ main {
 				background-image: url('/sts.jpg');
 				background-size: cover;
 				background-position: center;
-				border-radius: 5px;
+				border-radius: 8px;
 
 				&-superbet {
 					background-image: url('./superbet.jpg');
@@ -1545,7 +1601,7 @@ main {
 	&__star,
 	&__time,
 	&__teamname {
-		padding: 0.5em 1em;
+		padding: 0.29em 1em;
 		font-size: 1.3rem;
 	}
 
@@ -1559,7 +1615,7 @@ main {
 	}
 
 	&__star {
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 		color: gold;
 	}
 
@@ -1576,7 +1632,7 @@ main {
 		padding: 0.5em 1em;
 		color: rgb(200, 205, 205);
 		font-size: 1.3rem;
-		border-radius: 5px;
+		border-radius: 8px;
 		text-decoration: none;
 	}
 
@@ -1632,7 +1688,8 @@ main {
 	align-items: center;
 }
 
-.sitemap,.sitemapbottom {
+.sitemap,
+.sitemapbottom {
 	// display: flex;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -1640,7 +1697,7 @@ main {
 	// justify-content: space-between;
 	// align-items: center;
 	// flex-wrap: wrap;
-	margin-top: 3em;
+	margin-top: 1.5em;
 	width: 100%;
 	font-size: 1.3rem;
 
@@ -1653,7 +1710,7 @@ main {
 		line-height: 1.5em;
 	}
 
-	&__mobile{
+	&__mobile {
 		padding: 0.5em 0.1em;
 	}
 
@@ -1685,12 +1742,12 @@ main {
 	&__flashscorebox--link,
 	&__mobile--text {
 		padding: 0.5em 1em;
-		padding-right:0;
+		padding-right: 0;
 		color: #eee;
 		text-decoration: none;
 	}
 
-	&__flashscorebox--link{
+	&__flashscorebox--link {
 		&:hover {
 			text-decoration: underline;
 		}
@@ -1710,7 +1767,7 @@ main {
 		height: 30px;
 		background-color: transparent;
 		border: 1px solid rgb(200, 205, 205);
-		border-radius: 5px;
+		border-radius: 8px;
 
 		&:hover {
 			background-color: rgba(122, 118, 118, 0.5);
@@ -1751,8 +1808,9 @@ main {
 	}
 }
 
-.sitemapbottom{
-	&__mobile{
+.sitemapbottom {
+	margin-top: 3em;
+	&__mobile {
 		padding: 0 1em;
 		grid-column: 4/-1;
 	}
@@ -1785,13 +1843,13 @@ main {
 	display: flex;
 	align-items: center;
 	margin-top: 3em;
-	padding: 0.5em 1em;
+	padding: 0.5em 1em 0;
 	height: 81px;
 	border-top: 3px solid #0f2d37;
 	font-size: 1.2rem;
 	z-index: 8;
 
-	&__triangle{
+	&__triangle {
 		position: absolute;
 		bottom: 0;
 		right: -25%;
@@ -1805,7 +1863,7 @@ main {
 
 	&__liteversion {
 		color: #ddd;
-		margin-right: 17.7em;
+		margin-right: 14em;
 
 		&:hover {
 			text-decoration: none;
@@ -1865,12 +1923,16 @@ main {
 	padding: 0.5em;
 }
 
-.navtop__pref-element-checkicon{
-	pointer-events: none
+.navtop .fa-headphones {
+	padding: 0.25em 0.5em;
+}
+
+.navtop__pref-element-checkicon {
+	pointer-events: none;
 }
 
 .regionbar__countries .regionbar__region,
-.regionbar__li-hidden .regionbar__region{
+.regionbar__li-hidden .regionbar__region {
 	padding-left: 0;
 }
 
